@@ -1,0 +1,105 @@
+/*
+Name : Custom Admin
+Author: Enza Lombardo
+Description: Feuille de style pour le dashboard
+Copyright: 2019 © Enza Lombardo
+Version: 1.0
+*/
+
+.form-custom .form-table-custom{
+    border: inherit;
+}
+
+.form-custom h2{
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0;
+    line-height: 3;
+    /* margin-top: 2rem; */
+    padding-left: 15px;
+}
+
+.form-custom .form-table{
+    background: #fff;
+    margin: 0;
+    margin-bottom: 2rem;
+    /* border: 1px solid #e5e5e5; */
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.form-custom .form-table th{
+    padding-left: 15px;
+}
+
+.form-custom input[type="text"]{
+    width: 60%;
+}
+
+.form-custom textarea{
+    width: 60%;
+    height: auto;
+}
+
+
+.info{
+    font-size:smaller;
+    color: #9c9c9c;
+    line-height: 1;
+    padding-left: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE FORMULE */
+/* -------------------------------------------------------------------------- */
+
+.tarif input[type="text"]{
+    width: 100px;
+}
+
+.table-tarif {
+    border-collapse: collapse;
+}
+
+.table-tarif .day, .table-tarif .tarif{
+    border: 1px solid #ccc;
+}
+
+.table-tarif thead tr .day{
+    width: 100px;
+}
+
+.table-tarif thead tr .tarif{
+    width: 150px;
+}
+
+.table-tarif th{
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM PAGE ALBUM */
+/* -------------------------------------------------------------------------- */
+
+#table-repeatable-fieldset .remove-row{
+    padding: 0 15px;
+    border-radius: 15px;
+    font-size: large;
+}
+
+#table-repeatable-fieldset .remove-row:hover{
+    background: red;
+    color: #fff;
+}
+
+#add-row:hover{
+    background: green;
+    color: #fff;
+}
+
+.button.btn-save.button-large:hover{
+    background: #008ec2;
+    border-color: #006799;
+    color: #fff;
+}
