@@ -9,7 +9,15 @@ copyright : 2019 © Enza Lombardo
 Version: 1.0
 */
 
+/*
+-----    SOMMAIRES    -----
 
+    section 1 : section_location
+    section 2 : section_social
+    section 3 : section_creditcard
+    section 4 : section_uptload_inforesto
+
+*/
 
 /* ----------------------------------------------------------------------------- */
 // SECTION 1 : section_location --> Option 1 -- info-resto

@@ -12,11 +12,6 @@ Version: 1.0
 /*
     -----    SOMMAIRES    -----
 
-
-
-
-
-
         I- ADD MENU PAGE
         II - THEME PAGE
         III - SETTING SECTION AND FIED

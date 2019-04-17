@@ -1,9 +1,8 @@
 <?php
 
 /*
-Name:   custom-settings - Page accueil
-Description: Fonction pour controllé les sections de la page d'accueil
-             [custom_settings_option_theme]
+Name:   [view-form] -> Page accueil
+Description: Element de formulaire pour les sections de la page d'accueil
              => 1er onglet de la page API option-theme
 Author: Enza Lombardo
 Author URI: www.enzalombardo.be
@@ -22,8 +21,6 @@ Version: 1.0
     section 6 : section_contact
 
 */
-
-
 
 /* ----------------------------------------------------------------------------- */
 // SECTION 1 : section_cover --> Option 1 -- page-accueil
