@@ -1,0 +1,24 @@
+// main: ../style.scss
+
+.icons{
+    display: inline;
+    font-family: Flaticon;
+    font-size: 1.5rem;
+}
+
+
+
+// MEDIUM ----------------------------------------------------------------------
+@include responsive(M){
+
+}
+
+// SMALL -----------------------------------------------------------------------
+@include responsive(S){
+
+}
+
+//  EXTRA SMALL ----------------------------------------------------------------
+@include responsive(XS){
+
+}

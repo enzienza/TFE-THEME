@@ -46,23 +46,29 @@ function field_inforesto_phone(){
 function display_section_social(){}
 
 function field_inforesto_facebook(){
+    $yes_facebbok = esc_attr(get_option('yes_facebbok'));
     $inforesto_facebook = esc_attr(get_option('inforesto_facebook'));
     ?>
-        <input type="text" id="inforesto_facebook" name="inforesto_facebook" value="<?php echo(get_option('inforesto_facebook')) ?>" />
+        <input type="checkbox" id="yes_facebbok" name="yes_facebbok" value="1" <?php checked(1, get_option('yes_facebbok'), true); ?> />
+        <input type="text" id="inforesto_facebook" name="inforesto_facebook" value="<?php echo(get_option('inforesto_facebook')); ?>" />
     <?php
 } // END => field_inforesto_facebook
 
 function field_inforesto_twitter(){
+    $yes_twitter = esc_attr(get_option('yes_twitter'));
     $inforesto_twitter = esc_attr(get_option('inforesto_twitter'));
     ?>
-        <input type="text" id="inforesto_twitter" name="inforesto_twitter" value="<?php echo(get_option('inforesto_twitter')) ?>" />
+        <input type="checkbox" id="yes_twitter" name="yes_twitter" value="1" <?php checked(1, get_option('yes_twitter'), true); ?> />
+        <input type="text" id="inforesto_twitter" name="inforesto_twitter" value="<?php echo(get_option('inforesto_twitter')); ?>" />
     <?php
 } // END => field_inforesto_twitter
 
 function field_inforesto_instagram(){
+    $yes_instagram = esc_attr(get_option('yes_instagram'));
     $inforesto_instagram = esc_attr(get_option('inforesto_instagram'));
     ?>
-        <input type="text" id="inforesto_instagram" name="inforesto_instagram" value="<?php echo(get_option('inforesto_instagram')) ?>" />
+        <input type="checkbox" id="yes_instagram" name="yes_instagram" value="1" <?php checked(1, get_option('yes_instagram'), true); ?> />
+        <input type="text" id="inforesto_instagram" name="inforesto_instagram" value="<?php echo(get_option('inforesto_instagram')); ?>" />
     <?php
 } // END => field_inforesto_instagram
 

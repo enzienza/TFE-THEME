@@ -60,7 +60,7 @@ register_setting('group-info-resto', 'inforesto_phone');
 // SETTING
 add_settings_section(
     'section_social',                                   // ID
-    __('Réseau Sociaux', 'section_social'),                 // TITLE
+    __('Réseau Sociaux', 'section_social'),             // TITLE
     'display_section_social',                           // CALLBACK
     'info-resto'                                        // PAGE
 ); // end --> section : section_social
@@ -93,8 +93,11 @@ add_settings_field(
 ); // end --> field : inforesto_instagram
 
 // REGISTER : section_social
+register_setting('group-info-resto', 'yes_facebbok');
 register_setting('group-info-resto', 'inforesto_facebook');
+register_setting('group-info-resto', 'yes_twitter');
 register_setting('group-info-resto', 'inforesto_twitter');
+register_setting('group-info-resto', 'yes_instagram');
 register_setting('group-info-resto', 'inforesto_instagram');
 
 

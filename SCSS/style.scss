@@ -21,10 +21,12 @@ Version: 1.0
 // BASE ------------------------------------------------------------------------
 @import "base/reset";
 @import "base/general";
+@import 'base/fonts';
 @import "base/animated";
 
 // MODULES ---------------------------------------------------------------------
 @import "modules/boutons";
+@import "modules/icons";
 
 // LAYOUT ----------------------------------------------------------------------
 @import "layout/menu";
