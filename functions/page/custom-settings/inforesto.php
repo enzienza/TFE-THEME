@@ -1,7 +1,7 @@
 <?php
 
 /*
-Name:   custom-theme - info-resto
+Name:   custom-settings - info-resto
 Description: custom_settings_pekinparis pour les info-resto du 1er onglet de la page API Pékin-paris
 Author: Enza Lombardo
 Author URI: www.enzalombardo.be

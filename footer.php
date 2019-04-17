@@ -1,6 +1,5 @@
     <!-- ===================== DEBUT FOOTER ===================== -->
 
-
     <footer  role="contentinfo">
         <div class="container">
             <div class="row">

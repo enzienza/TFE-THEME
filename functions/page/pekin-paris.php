@@ -116,7 +116,7 @@ function theme_page_pekinparis(){
 
 
         </div>
-    </div>
+    </div><!-- / .wrap -->
 
 
     <?php
@@ -135,18 +135,11 @@ add_action('admin_init', 'custom_settings_pekinparis');
 // contruire des paramettres ---------------------------------------------------
 function custom_settings_pekinparis(){
 
+    // Option 1 -- INFO-RESTO --------------------------------------------------
+    require get_template_directory().'/functions/page/custom-settings/inforesto.php';
 
-    /* ----------------------------------------------------------------------- */
-    /* Option 1 -- INFO-RESTO */
-    /* ----------------------------------------------------------------------- */
-    require get_template_directory().'/functions/page/custom-theme/inforesto.php';
-
-
-    /* ----------------------------------------------------------------------- */
-    /* Option 2 -- HORAIRE */
-    /* ----------------------------------------------------------------------- */
-    require get_template_directory().'/functions/page/custom-theme/horaire.php';
-
+    // Option 2 -- HORAIRE -----------------------------------------------------
+    require get_template_directory().'/functions/page/custom-settings/horaire.php';
 
 } // END ==> custom_settings_pekinparis
 
