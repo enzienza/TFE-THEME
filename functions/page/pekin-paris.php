@@ -38,7 +38,7 @@ function add_page_pekinparis(){
         'Pékin - Paris',                            // page_title
         'Pékin - Paris',                            // menu_title
         'manage_options',                           // capability
-        'info-resto',                          // slug_menu
+        'info-resto',                               // slug_menu
         'theme_page_pekinparis',                    // function qui rendra la sortie
         '',                                         // icon
         100                                         // position
@@ -145,18 +145,8 @@ function custom_settings_pekinparis(){
     /* ----------------------------------------------------------------------- */
     /* Option 2 -- HORAIRE */
     /* ----------------------------------------------------------------------- */
-    // require get_template_directory().'/functions/page/custom-theme/horaire.php';
+    require get_template_directory().'/functions/page/custom-theme/horaire.php';
 
-    // // SETTING
-    // add_settings_section(
-    //     'section_horaire',                              // ID
-    //     __('', 'section_horaire'),                      // TITLE
-    //     'display_section_horaire',                      // CALLBACK
-    //     'horaires'                                      // PAGE
-    // ); // end --> section_location
-
-
-    
 
 } // END ==> custom_settings_pekinparis
 
@@ -166,18 +156,8 @@ function custom_settings_pekinparis(){
 /* IV - FIELD CALLBACK
 /* ----------------------------------------------------------------------------- */
 
-
-/* ----------------------------------------------------------------------- */
-/* Option 1 -- INFO-RESTO */
-/* ----------------------------------------------------------------------- */
+// Option 1 -- INFO-RESTO ------------------------------------------------------
 require get_template_directory().'/functions/page/view-form/inforesto.php';
 
-
-
-
-/* ----------------------------------------------------------------------- */
-/* Option 2 -- HORAIRE */
-/* ----------------------------------------------------------------------- */
-// require get_template_directory().'/functions/page/view-form/horaire.php';
-
-// function display_section_horaire(){}
+// Option 2 -- HORAIRE ---------------------------------------------------------
+require get_template_directory().'/functions/page/view-form/horaire.php';

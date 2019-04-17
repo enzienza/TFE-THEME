@@ -68,6 +68,33 @@ Version: 1.0
 }
 
 /* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE HORAIRE */
+/* -------------------------------------------------------------------------- */
+.table-hour{
+    border-collapse: collapse;
+}
+
+.table-hour .day, .table-hour .service, .table-hour .open,
+.item-hour-day td{
+    border: 1px solid #ccc;
+}
+
+.table-hour thead tr .day,
+.table-hour thead tr .open{
+    width: 100px;
+}
+
+.table-hour thead tr .service{
+    width: 230px;
+}
+
+.table-hour th{
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
 /* CUSTOM ADMIN PAGE FORMULE */
 /* -------------------------------------------------------------------------- */
 
