@@ -9,8 +9,21 @@ copyright : 2019 © Enza Lombardo
 Version: 1.0
 */
 
+/*
+    -----    SOMMAIRES    -----
+
+        I- ADD MENU PAGE
+        II - THEME PAGE
+        III - SETTING SECTION AND FIED
+            * Option 1 : info-resto
+            * Option 2 : horaire
+        IV - FIELD CALLBACK
+
+*/
+
+
 /* ----------------------------------------------------------------------------- */
-/* ADD MENU PAGE */
+/* I - ADD MENU PAGE */
 /* ----------------------------------------------------------------------------- */
 
 // initialisation de la page ---------------------------------------------------
@@ -42,7 +55,7 @@ function tabs_pekinparis(){
 } // END ==>  tabs_pekinparis
 
 /* ----------------------------------------------------------------------------- */
-/* THEME PAGE */
+/* II - THEME PAGE */
 /* ----------------------------------------------------------------------------- */
 
 // PAGE 1er NIVEAU -----------------------------
@@ -64,7 +77,9 @@ function theme_page_pekinparis(){
                     foreach($tabs as $key => $value){
                         $class = ( $key == $current ) ? ' nav-tab-active' : '';
                         ?>
-                        <a href="?page=pekinparis&tab=<?php echo $key; ?>" class="nav-tab<?php echo $class; ?>"><?php echo $value; ?></a>
+                        <a href="?page=info-resto&tab=<?php echo $key; ?>" class="nav-tab<?php echo $class; ?>">
+                            <?php echo $value; ?>
+                        </a>
                         <?php
                     }
                 }
@@ -72,22 +87,22 @@ function theme_page_pekinparis(){
             </h2><!-- / .nav-tab-wrapper -->
 
 
-                <form class="form-custom"  method="post" action="options.php">
+                <form class=""  method="post" action="options.php">
 
                     <?php
 
                     if($_GET['tab'] == 'horaires'){
                         ?>
                         <h3>Horaire</h3>
-                        <div class="form-table form-table-custom">
+                        <div class="">
                             <?php settings_fields( 'group-horaire' );?>
-                            <?php do_settings_sections( 'horaire' ); ?>
+                            <?php do_settings_sections( 'horaires' ); ?>
                         </div>
                         <?php
                     } else {
                         ?>
                         <h3 class="wp-heading-inline">Info Resto</h3>
-                        <div class="">
+                        <div class="form-custom">
                             <?php settings_fields( 'group-info-resto' );?>
                             <?php do_settings_sections( 'info-resto' ); ?>
                         </div>
@@ -110,7 +125,7 @@ function theme_page_pekinparis(){
 
 
 /* ----------------------------------------------------------------------------- */
-/* SETTING SECTION AND FIED */
+/* III - SETTING SECTION AND FIED */
 /* ----------------------------------------------------------------------------- */
 
 // initialisation des paramattre -----------------------------------------------
@@ -120,46 +135,27 @@ add_action('admin_init', 'custom_settings_pekinparis');
 // contruire des paramettres ---------------------------------------------------
 function custom_settings_pekinparis(){
 
-    // LOCATION ----------------------------------------------------------------
-    /* --- setting ---*/
+
+    /* ----------------------------------------------------------------------- */
+    /* Option 1 -- INFO-RESTO */
+    /* ----------------------------------------------------------------------- */
+    require get_template_directory().'/functions/page/custom-theme/inforesto.php';
+
+
+    /* ----------------------------------------------------------------------- */
+    /* Option 2 -- HORAIRE */
+    /* ----------------------------------------------------------------------- */
+    // require get_template_directory().'/functions/page/custom-theme/horaire.php';
+
+    // SETTING
     add_settings_section(
-        'section_location',                                // ID (id used to identify the field throughout the theme)
-        __('Coordonnée', 'section_location'),              // TITLE (title to be displayed on the administration page)
-        'display_section_location',                        // CALLBACK (callback used to render the description of the section)
-        'info-resto'                                       // PAGE (page on which to add this section of options)
+        'section_horaire',                              // ID
+        __('', 'section_horaire'),                      // TITLE
+        'display_section_horaire',                      // CALLBACK
+        'horaires'                                      // PAGE
     ); // end --> section_location
 
-    /* --- fields ---*/
-    add_settings_field(
-        'inforesto_adresse',                               // ID -- ID used to identify the field throughout the theme
-        __('Adresse', 'section_location'),                  // LABEL -- The label to the left of the option interface element
-        'field_inforesto_adresse',                         // CALLBACK FUNCTION -- The name of the function responsible for rendering the option interface
-        'info-resto',                                       // MENU PAGE SLUG -- The page on which this option will be displayed
-        'section_location'                                  // SECTION ID -- The name of the section to which this field belongs
-    ); // end --> field_inforesto_adresse
 
-    add_settings_field(
-        'inforesto_map',                               // ID -- ID used to identify the field throughout the theme
-        __('URL Google Map', 'section_location'),                  // LABEL -- The label to the left of the option interface element
-        'field_inforesto_map',                              // CALLBACK FUNCTION -- The name of the function responsible for rendering the option interface
-        'info-resto',                                       // MENU PAGE SLUG -- The page on which this option will be displayed
-        'section_location'                                  // SECTION ID -- The name of the section to which this field belongs
-    ); // end --> field_inforesto_map
-
-    add_settings_field(
-        'inforesto_phone',                               // ID -- ID used to identify the field throughout the theme
-        __('Téléphone', 'section_location'),                  // LABEL -- The label to the left of the option interface element
-        'field_inforesto_phone',                         // CALLBACK FUNCTION -- The name of the function responsible for rendering the option interface
-        'info-resto',                                       // MENU PAGE SLUG -- The page on which this option will be displayed
-        'section_location'                                  // SECTION ID -- The name of the section to which this field belongs
-    ); // end --> field_inforesto_phone
-
-    /* --- register --- */
-    register_setting('group-info-resto', 'inforesto_adresse');
-    register_setting('group-info-resto', 'inforesto_map');
-    register_setting('group-info-resto', 'inforesto_phone');
-
-    // LOCATION ----------------------------------------------------------------
 
 
 } // END ==> custom_settings_pekinparis
@@ -167,29 +163,23 @@ function custom_settings_pekinparis(){
 
 
 /* ----------------------------------------------------------------------------- */
-/* FIELD CALLBACK
+/* IV - FIELD CALLBACK
 /* ----------------------------------------------------------------------------- */
 
 
-function display_section_location(){}
+/* ----------------------------------------------------------------------- */
+/* Option 1 -- INFO-RESTO */
+/* ----------------------------------------------------------------------- */
+require get_template_directory().'/functions/page/view-form/inforesto.php';
 
-function field_inforesto_adresse(){
-    $inforesto_adresse = esc_attr(get_option('inforesto_adresse'));
-    ?>
-        <input type="text" id="inforesto_adresse" name="inforesto_adresse" value="<?php echo(get_option('inforesto_adresse')); ?>" />
-    <?php
-} //END => field_inforesto_adresse
 
-function field_inforesto_map(){
-    $inforesto_map = esc_attr(get_option('inforesto_map'));
-    ?>
-        <textarea name="inforesto_map" id="inforesto_map" cols="80"><?php echo esc_attr(get_option('inforesto_map')); ?></textarea>
-    <?php
-} //END => field_inforesto_map
+/* ----------------------------------------------------------------------- */
+/* Option 2 -- HORAIRE */
+/* ----------------------------------------------------------------------- */
+// require get_template_directory().'/functions/page/view-form/horaire.php';
 
-function field_inforesto_phone(){
-    $inforesto_phone = esc_attr(get_option('inforesto_phone'));
+function display_section_horaire(){
     ?>
-        <input type="text" id="inforesto_phone" name="inforesto_phone" value="<?php echo(get_option('inforesto_phone')); ?>" />
+        <h3>Que c'est beau</h3>
     <?php
-} //END => field_inforesto_phone
+}

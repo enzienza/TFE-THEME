@@ -28,9 +28,9 @@ Version: 1.0
 /* ----------------------------------------------------- */
 
 // fonction qui vérifie si le 'theme test' exixte déjà avant de l'initialiser
-if ( ! function_exists( 'tfe_setup' ) ) {
+if ( ! function_exists( 'pekinparis_setup' ) ) {
 
-	function tfe_setup() {
+	function pekinparis_setup() {
 
 		// active le titre => important pour le réferencement
 		add_theme_support( "title-tag" );
@@ -46,19 +46,19 @@ if ( ! function_exists( 'tfe_setup' ) ) {
 			'header' => esc_html__( 'Header', 'test' ),
 		) );
 
-	} // END -> function tfe_setup()
-} // END -> if ( ! function_exists( 'tfe_setup' ) )
-add_action( 'after_setup_theme', 'tfe_setup' );
+	} // END -> function pekinparis_setup()
+} // END -> if ( ! function_exists( 'pekinparis_setup' ) )
+add_action( 'after_setup_theme', 'pekinparis_setup' );
 
 
 /* ----------------------------------------------------- */
 /* ----------    Include Styles and script    ---------- */
 /* ----------------------------------------------------- */
 
-// fonction qui vérifie si 'tfe_styles_scripts' exixte déjà avant de l'initialiser
-if ( ! function_exists( 'tfe_styles_scripts' ) ) {
+// fonction qui vérifie si 'pekinparis_styles_scripts' exixte déjà avant de l'initialiser
+if ( ! function_exists( 'pekinparis_styles_scripts' ) ) {
 
-	function tfe_style_scripts() {
+	function pekinparis_style_scripts() {
 
 		/* --- SCRIPT --- */
 		// wp_enqueue_script('jquery');
@@ -82,9 +82,9 @@ if ( ! function_exists( 'tfe_styles_scripts' ) ) {
 
 		// inclus
 		wp_enqueue_style( 'style', get_template_directory_uri().'/style.min.css');
-	} // END -> tfe_styles_scripts()
-} // END -> if ( ! function_exists( 'tfe_styles_scripts' ))
-add_action( 'wp_enqueue_scripts', 'tfe_style_scripts' );
+	} // END -> pekinparis_styles_scripts()
+} // END -> if ( ! function_exists( 'pekinparis_styles_scripts' ))
+add_action( 'wp_enqueue_scripts', 'pekinparis_style_scripts' );
 
 
 
