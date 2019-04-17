@@ -87,7 +87,7 @@ function theme_page_pekinparis(){
             </h2><!-- / .nav-tab-wrapper -->
 
 
-                <form class=""  method="post" action="options.php">
+                <form class=""  method="post" action="options.php" enctype="multipart/form-data">
 
                     <?php
 
@@ -147,16 +147,16 @@ function custom_settings_pekinparis(){
     /* ----------------------------------------------------------------------- */
     // require get_template_directory().'/functions/page/custom-theme/horaire.php';
 
-    // SETTING
-    add_settings_section(
-        'section_horaire',                              // ID
-        __('', 'section_horaire'),                      // TITLE
-        'display_section_horaire',                      // CALLBACK
-        'horaires'                                      // PAGE
-    ); // end --> section_location
+    // // SETTING
+    // add_settings_section(
+    //     'section_horaire',                              // ID
+    //     __('', 'section_horaire'),                      // TITLE
+    //     'display_section_horaire',                      // CALLBACK
+    //     'horaires'                                      // PAGE
+    // ); // end --> section_location
 
 
-
+    
 
 } // END ==> custom_settings_pekinparis
 
@@ -173,13 +173,11 @@ function custom_settings_pekinparis(){
 require get_template_directory().'/functions/page/view-form/inforesto.php';
 
 
+
+
 /* ----------------------------------------------------------------------- */
 /* Option 2 -- HORAIRE */
 /* ----------------------------------------------------------------------- */
 // require get_template_directory().'/functions/page/view-form/horaire.php';
 
-function display_section_horaire(){
-    ?>
-        <h3>Que c'est beau</h3>
-    <?php
-}
+// function display_section_horaire(){}

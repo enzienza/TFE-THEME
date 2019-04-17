@@ -6,6 +6,25 @@ Copyright: 2019 © Enza Lombardo
 Version: 1.0
 */
 
+/* -------------------------------------------------------------------------- */
+/* GENERAL */
+/* -------------------------------------------------------------------------- */
+.backend-card-img{
+    float: left;
+    border: 1px solid #e5e5e5;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.backend-img-logo{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ADMIN PAGE FORM */
+/* -------------------------------------------------------------------------- */
+
 .form-custom .form-table-custom{
     border: inherit;
 }

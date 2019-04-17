@@ -15,18 +15,21 @@ Version: 1.0
 /* ----------------------------------------------------------------------------- */
 
 function display_section_location(){}
+
 function field_inforesto_adresse(){
     $inforesto_adresse = esc_attr(get_option('inforesto_adresse'));
     ?>
         <input type="text" id="inforesto_adresse" name="inforesto_adresse" value="<?php echo(get_option('inforesto_adresse')); ?>" />
     <?php
 } //END => field_inforesto_adresse
+
 function field_inforesto_map(){
     $inforesto_map = esc_attr(get_option('inforesto_map'));
     ?>
         <textarea name="inforesto_map" id="inforesto_map" cols="80"><?php echo esc_attr(get_option('inforesto_map')); ?></textarea>
     <?php
 } //END => field_inforesto_map
+
 function field_inforesto_phone(){
     $inforesto_phone = esc_attr(get_option('inforesto_phone'));
     ?>
@@ -41,18 +44,21 @@ function field_inforesto_phone(){
 /* ----------------------------------------------------------------------------- */
 
 function display_section_social(){}
+
 function field_inforesto_facebook(){
     $inforesto_facebook = esc_attr(get_option('inforesto_facebook'));
     ?>
         <input type="text" id="inforesto_facebook" name="inforesto_facebook" value="<?php echo(get_option('inforesto_facebook')) ?>" />
     <?php
 } // END => field_inforesto_facebook
+
 function field_inforesto_twitter(){
     $inforesto_twitter = esc_attr(get_option('inforesto_twitter'));
     ?>
         <input type="text" id="inforesto_twitter" name="inforesto_twitter" value="<?php echo(get_option('inforesto_twitter')) ?>" />
     <?php
 } // END => field_inforesto_twitter
+
 function field_inforesto_instagram(){
     $inforesto_instagram = esc_attr(get_option('inforesto_instagram'));
     ?>
@@ -98,3 +104,40 @@ function field_inforesto_carte(){
 
     <?php
 } // END => field_inforesto_carte
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 4 : section_uptload_inforesto --> Option 1 -- info-resto
+/* ----------------------------------------------------------------------------- */
+function handle_file_logo($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['logo_resto']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['logo_resto'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['logo_resto']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('logo_resto');
+
+} // END => handle_file_logo
+
+
+function display_section_uptload_inforesto(){
+
+}
+function field_inforesto_logo(){
+    //echo form element for file upload
+
+    ?>
+    <div class="backend-card-img">
+        <img src="<?php echo get_option('logo_resto'); ?>" alt="" class="backend-img-logo">
+    </div>
+    <div class="">
+        <input type="file" name='logo_resto' id='logo_resto' value="<?php echo get_option('logo_resto'); ?>" />
+        <p>
+            <input type="text" name="" value="<?php echo get_option('logo_resto'); ?>" />
+        </p>
+
+    </div>
+    <?php
+} // END => field_inforesto_logo

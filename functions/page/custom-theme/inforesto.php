@@ -20,7 +20,7 @@ add_settings_section(
     __('Coordonnée', 'section_location'),              // TITLE
     'display_section_location',                        // CALLBACK
     'info-resto'                                       // PAGE
-); // end --> section_location
+); // end --> section : section_location
 
 // FIELDS : inforesto_adresse
 add_settings_field(
@@ -29,7 +29,7 @@ add_settings_field(
     'field_inforesto_adresse',                         // CALLBACK FUNCTION
     'info-resto',                                      // MENU PAGE SLUG
     'section_location'                                 // SECTION ID
-); // end --> field_inforesto_adresse
+); // end --> field : inforesto_adresse
 
 // FIELDS : inforesto_map
 add_settings_field(
@@ -38,7 +38,7 @@ add_settings_field(
     'field_inforesto_map',                              // CALLBACK FUNCTION
     'info-resto',                                       // MENU PAGE SLUG
     'section_location'                                  // SECTION ID
-); // end --> field_inforesto_map
+); // end --> field : inforesto_map
 
 // FIELDS : inforesto_phone
 add_settings_field(
@@ -47,7 +47,7 @@ add_settings_field(
     'field_inforesto_phone',                            // CALLBACK FUNCTION
     'info-resto',                                       // MENU PAGE SLUG
     'section_location'                                  // SECTION ID
-); // end --> field_inforesto_phone
+); // end --> field : inforesto_phone
 
 // REGISTER : section_location
 register_setting('group-info-resto', 'inforesto_adresse');
@@ -63,7 +63,7 @@ add_settings_section(
     __('Réseau Sociaux', 'section_social'),                 // TITLE
     'display_section_social',                           // CALLBACK
     'info-resto'                                        // PAGE
-); // end --> section_social
+); // end --> section : section_social
 
 // FIELDS : inforesto_facebook
 add_settings_field(
@@ -72,7 +72,7 @@ add_settings_field(
     'field_inforesto_facebook',                         // CALLBACK FUNCTION
     'info-resto',                                       // MENU PAGE SLUG
     'section_social'                                    // SECTION ID
-); // end --> field_inforesto_facebook
+); // end --> field : inforesto_facebook
 
 // FIELDS : inforesto_twitter
 add_settings_field(
@@ -81,7 +81,7 @@ add_settings_field(
     'field_inforesto_twitter',                          // CALLBACK FUNCTION
     'info-resto',                                       // MENU PAGE SLUG
     'section_social'                                    // SECTION ID
-); // end --> field_inforesto_twitter
+); // end --> field : inforesto_twitter
 
 // FIELDS : inforesto_instagram
 add_settings_field(
@@ -90,7 +90,7 @@ add_settings_field(
     'field_inforesto_instagram',                        // CALLBACK FUNCTION
     'info-resto',                                       // MENU PAGE SLUG
     'section_social'                                    // SECTION ID
-); // end --> field_inforesto_instagram
+); // end --> field : inforesto_instagram
 
 // REGISTER : section_social
 register_setting('group-info-resto', 'inforesto_facebook');
@@ -103,24 +103,53 @@ register_setting('group-info-resto', 'inforesto_instagram');
 /* ----------------------------------------------------------------------------- */
 // SETTING
 add_settings_section(
-    'section_creditcard',                                   // ID
-    __('Mode de paiements', 'section_creditcard'),                 // TITLE
-    'display_section_creditcard',                           // CALLBACK
-    'info-resto'                                        // PAGE
-); // end --> section_social
+    'section_creditcard',                                // ID
+    __('Mode de paiements', 'section_creditcard'),       // TITLE
+    'display_section_creditcard',                        // CALLBACK
+    'info-resto'                                         // PAGE
+); // end --> section : section_creditcard
 
 // FIELDS : inforesto_facebook
 add_settings_field(
-    'inforesto_carte',                               // ID
-    __('Cartes', 'section_creditcard'),        // LABEL
-    'field_inforesto_carte',                         // CALLBACK FUNCTION
-    'info-resto',                                       // MENU PAGE SLUG
-    'section_creditcard'                                    // SECTION ID
-); // end --> field_inforesto_facebook
+    'inforesto_carte',                                   // ID
+    __('Cartes', 'section_creditcard'),                  // LABEL
+    'field_inforesto_carte',                             // CALLBACK FUNCTION
+    'info-resto',                                        // MENU PAGE SLUG
+    'section_creditcard'                                 // SECTION ID
+); // end --> field : inforesto_facebook
 
 
-// REGISTER : section_social
+// REGISTER : section_creditcard
 register_setting('group-info-resto', 'inforesto_carte_visa');
 register_setting('group-info-resto', 'inforesto_carte_mastercard');
 register_setting('group-info-resto', 'inforesto_carte_american');
 register_setting('group-info-resto', 'inforesto_carte_maestro');
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 4 : section_uptload_inforesto --> Option 1 -- info-resto
+/* ----------------------------------------------------------------------------- */
+
+// SETTING
+add_settings_section(
+    'section_uptload_inforesto', // ID
+    __('Image', 'section_uptload_inforesto'), // TITLE
+    'display_section_uptload_inforesto', // CALLBACK
+    'info-resto' // PAGE
+); // end -> section : section_uptload_inforesto
+
+
+// FIELDS : logo_resto
+add_settings_field(
+    'logo_resto', // ID
+    __('Ajouter le logo', 'section_uptload_inforesto'), // LABEL
+    'field_inforesto_logo', // CALLBACK FUNCTION
+    'info-resto', // MENU PAGE SLUG
+    'section_uptload_inforesto' // SECTION ID
+); // end -> field : logo_resto
+
+// REGISTER : logo_resto
+register_setting(
+    'group-info-resto',    // group (element display in the form)
+    'logo_resto', // field ID
+    'handle_file_logo' // Callback function
+); // end -> register : handle_file_logo
