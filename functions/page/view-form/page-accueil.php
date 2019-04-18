@@ -77,6 +77,25 @@ function field_homepage_cover_bg_img(){
     <?php
 } // END => field_homepage_cover_bg_img
 
+// CALLBACK FIELD : homepage_cover_bg_video ------------------------------------
+function field_homepage_cover_bg_video(){
+    ?>
+        <div class="">
+            <p>
+                <input type="checkbox" id="" name="" value="1" <?php //checked(1, get_option(''), true); ?> />
+                <span class="info">Ajouter une image d'arrière-plan pour cette section</span>
+            </p>
+
+            <p>
+                <span>URL YouTube</span>
+                <input type="text" id="" name="" value="<?php //'); ?>" />
+            </p>
+
+        </div>
+    <?php
+} // END => field_homepage_cover_bg_video
+
+
 // CALLBARCK FIELD : field_homepage_cover_titre --------------------------------
 function field_homepage_cover_titre(){
     $homepage_cover_titre = esc_attr(get_option('homepage_cover_titre'));
@@ -322,3 +341,203 @@ function field_homepage_carte_button(){
     </table><!-- / .table-btn -->
     <?php
 } // END => field_homepage_carte_button
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 4 : section_emporter --> Option 1 -- page-accueil
+/* ----------------------------------------------------------------------------- */
+
+// CALLBACK SETTINGS -----------------------------------------------------------
+function display_section_homepage_emporter(){}
+
+// CALLBACK REGISTER : homepage_emporter_bg_img -----------------------------------
+function handle_file_bg_emporter_homepage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['homepage_emporter_bg_img']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['homepage_emporter_bg_img'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['homepage_emporter_bg_img']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('homepage_emporter_bg_img');
+
+} // END => handle_file_bg_emporter_homepage
+
+// CALLBACK FIELDS : homepage_emporter_hidden -------------------------------------
+function field_homepage_emporter_hidden(){
+    $homepage_emporter_hidden = esc_attr(get_option('homepage_emporter_hidden'));
+    ?>
+        <div class="">
+            <input type="checkbox" id="homepage_emporter_hidden" name="homepage_emporter_hidden" value="1" <?php checked(1, get_option('homepage_emporter_hidden'), true); ?> />
+            <span class="info">Masquer cette section sur la page d'acceuil</span>
+        </div>
+    <?php
+} // END => field_homepage_emporter_hidden
+
+// CALLBACK FIELDS : homepage_emporter_bg_img -------------------------------------
+function field_homepage_emporter_bg_img(){
+    //echo form element for file upload
+
+    $homepage_emporter_affiche_img = esc_attr(get_option('homepage_emporter_affiche_img'));
+    ?>
+
+    <div class="">
+        <span>
+            <input type="checkbox" id="homepage_emporter_affiche_img" name="homepage_emporter_affiche_img" value="1" <?php checked(1, get_option('homepage_emporter_affiche_img'), true); ?> />
+            <span class="info">Ajouter une image d'arrière-plan pour cette section</span>
+        </span>
+        <input type="file" name='homepage_emporter_bg_img' id='homepage_emporter_bg_img' value="<?php echo get_option('homepage_emporter_bg_img'); ?>" />
+        <p>
+            <input type="text" name="" value="<?php echo get_option('homepage_emporter_bg_img'); ?>" />
+        </p>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('homepage_emporter_bg_img'); ?>" alt="" class="backend-img-bg">
+        </div>
+    </div>
+    <?php
+} // END => field_homepage_emporter_bg_img
+
+// CALLBARCK FIELD : field_homepage_emporter_titre --------------------------------
+function field_homepage_emporter_titre(){
+    $homepage_emporter_titre = esc_attr(get_option('homepage_emporter_titre'));
+    ?>
+        <div class="">
+            <input type="text" id="homepage_emporter_titre" name="homepage_emporter_titre" value="<?php echo(get_option('homepage_emporter_titre')); ?>">
+        </div>
+    <?php
+} // END => field_homepage_emporter_titre
+
+// CALLBARCK FIELD : field_homepage_emporter_texte --------------------------------
+function field_homepage_emporter_texte(){
+    $homepage_emporter_texte = esc_attr(get_option('homepage_emporter_texte'));
+    ?>
+    <div class="">
+        <textarea id="homepage_emporter_texte" name="homepage_emporter_texte" ><?php echo(get_option('homepage_emporter_texte')); ?></textarea>
+    </div>
+    <?php
+} // END => field_homepage_emporter_texte
+
+// CALLBARCK FIELD : field_homepage_emporter_button -------------------------------
+function field_homepage_emporter_button(){
+    $homepage_emporter_btn_actif = esc_attr(get_option('homepage_emporter_btn_actif'));
+    $homepage_emporter_btn_txt = esc_attr(get_option('homepage_emporter_btn_txt'));
+    $homepage_emporter_btn_url= esc_attr(get_option('homepage_emporter_btn_url'));
+    ?>
+    <table class="table-btn">
+        <p>
+            <input type="checkbox" id="homepage_emporter_btn_actif" name="homepage_emporter_btn_actif" value="1" <?php checked(1, get_option('homepage_emporter_btn_actif'), true); ?> />
+            <span>Afficher le bouton</span>
+        </p>
+        <tbody>
+            <tr class="backend-btn-item">
+                <td><label for="">Texte</label></td>
+                <td><input type="text" id="homepage_emporter_btn_txt" name="homepage_emporter_btn_txt" value="<?php echo(get_option('homepage_emporter_btn_txt')); ?>" /></td>
+            </tr><!-- / .backend-btn-item" -->
+            <tr class="backend-btn-item">
+                <td><label for="">Lien (url)</label></td>
+                <td><input type="text" id="homepage_emporter_btn_url" name="homepage_emporter_btn_url" value="<?php echo(get_option('homepage_emporter_btn_url')); ?>" /></td>
+            </tr><!-- / .backend-btn-item" -->
+        </tbody>
+    </table><!-- / .table-btn -->
+    <?php
+} // END => field_homepage_emporter_button
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 5 : section_event --> Option 1 -- page-accueil
+/* ----------------------------------------------------------------------------- */
+
+// CALLBACK SETTINGS -----------------------------------------------------------
+function display_section_homepage_event(){}
+
+// CALLBACK REGISTER : homepage_event_bg_img -----------------------------------
+function handle_file_bg_event_homepage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['homepage_event_bg_img']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['homepage_event_bg_img'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['homepage_event_bg_img']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('homepage_event_bg_img');
+
+} // END => handle_file_bg_event_homepage
+
+// CALLBACK FIELDS : homepage_event_hidden -------------------------------------
+function field_homepage_event_hidden(){
+    $homepage_event_hidden = esc_attr(get_option('homepage_event_hidden'));
+    ?>
+        <div class="">
+            <input type="checkbox" id="homepage_event_hidden" name="homepage_event_hidden" value="1" <?php checked(1, get_option('homepage_event_hidden'), true); ?> />
+            <span class="info">Masquer cette section sur la page d'acceuil</span>
+        </div>
+    <?php
+} // END => field_homepage_event_hidden
+
+// CALLBACK FIELDS : homepage_event_bg_img -------------------------------------
+function field_homepage_event_bg_img(){
+    //echo form element for file upload
+
+    $homepage_event_affiche_img = esc_attr(get_option('homepage_event_affiche_img'));
+    ?>
+
+    <div class="">
+        <span>
+            <input type="checkbox" id="homepage_event_affiche_img" name="homepage_event_affiche_img" value="1" <?php checked(1, get_option('homepage_event_affiche_img'), true); ?> />
+            <span class="info">Ajouter une image d'arrière-plan pour cette section</span>
+        </span>
+        <input type="file" name='homepage_event_bg_img' id='homepage_event_bg_img' value="<?php echo get_option('homepage_event_bg_img'); ?>" />
+        <p>
+            <input type="text" name="" value="<?php echo get_option('homepage_event_bg_img'); ?>" />
+        </p>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('homepage_event_bg_img'); ?>" alt="" class="backend-img-bg">
+        </div>
+    </div>
+    <?php
+} // END => field_homepage_event_bg_img
+
+// CALLBARCK FIELD : field_homepage_event_titre --------------------------------
+function field_homepage_event_titre(){
+    $homepage_event_titre = esc_attr(get_option('homepage_event_titre'));
+    ?>
+        <div class="">
+            <input type="text" id="homepage_event_titre" name="homepage_event_titre" value="<?php echo(get_option('homepage_event_titre')); ?>">
+        </div>
+    <?php
+} // END => field_homepage_event_titre
+
+// CALLBARCK FIELD : field_homepage_event_texte --------------------------------
+function field_homepage_event_texte(){
+    $homepage_event_texte = esc_attr(get_option('homepage_event_texte'));
+    ?>
+    <div class="">
+        <textarea id="homepage_event_texte" name="homepage_event_texte" ><?php echo(get_option('homepage_event_texte')); ?></textarea>
+    </div>
+    <?php
+} // END => field_homepage_event_texte
+
+// CALLBARCK FIELD : field_homepage_event_button -------------------------------
+function field_homepage_event_button(){
+    $homepage_event_btn_actif = esc_attr(get_option('homepage_event_btn_actif'));
+    $homepage_event_btn_txt = esc_attr(get_option('homepage_event_btn_txt'));
+    $homepage_event_btn_url= esc_attr(get_option('homepage_event_btn_url'));
+    ?>
+    <table class="table-btn">
+        <p>
+            <input type="checkbox" id="homepage_event_btn_actif" name="homepage_event_btn_actif" value="1" <?php checked(1, get_option('homepage_event_btn_actif'), true); ?> />
+            <span>Afficher le bouton</span>
+        </p>
+        <tbody>
+            <tr class="backend-btn-item">
+                <td><label for="">Texte</label></td>
+                <td><input type="text" id="homepage_event_btn_txt" name="homepage_event_btn_txt" value="<?php echo(get_option('homepage_event_btn_txt')); ?>" /></td>
+            </tr><!-- / .backend-btn-item" -->
+            <tr class="backend-btn-item">
+                <td><label for="">Lien (url)</label></td>
+                <td><input type="text" id="homepage_event_btn_url" name="homepage_event_btn_url" value="<?php echo(get_option('homepage_event_btn_url')); ?>" /></td>
+            </tr><!-- / .backend-btn-item" -->
+        </tbody>
+    </table><!-- / .table-btn -->
+    <?php
+} // END => field_homepage_event_button

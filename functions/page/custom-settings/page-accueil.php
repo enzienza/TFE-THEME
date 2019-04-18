@@ -48,7 +48,7 @@ add_settings_field(
 // FIELDS : homepage_cover_bg_img ----------------------------------------------
 add_settings_field(
     'homepage_cover_bg_img', // ID
-    __('Ajouter le logo', 'section_homepage_cover'), // LABEL
+    __('Image d\'arrière plan', 'section_homepage_cover'), // LABEL
     'field_homepage_cover_bg_img', // CALLBACK FUNCTION
     'page-accueil', // MENU PAGE SLUG
     'section_homepage_cover' // SECTION ID
@@ -56,13 +56,13 @@ add_settings_field(
 
 
 // // FIELDS : homepage_cover_bg_video -----------------------------------------
-// add_settings_field(
-//     'homepage_cover_bg_video',                                // ID
-//     __('Video d\'arrière plan', 'section_homepage_cover'),    // LABEL
-//     'field_homepage_cover_bg_video',                          // CALLBACK FUNCTION
-//     'page-accueil',                                           // MENU PAGE SLUG
-//     'section_homepage_cover'                                  // SECTION ID
-// ); // end --> field : homepage_cover_bg_video
+add_settings_field(
+    'homepage_cover_bg_video',                                // ID
+    __('Video d\'arrière plan', 'section_homepage_cover'),    // LABEL
+    'field_homepage_cover_bg_video',                          // CALLBACK FUNCTION
+    'page-accueil',                                           // MENU PAGE SLUG
+    'section_homepage_cover'                                  // SECTION ID
+); // end --> field : homepage_cover_bg_video
 
 // FIELDS : homepage_cover_titre -----------------------------------------------
 add_settings_field(
@@ -262,3 +262,155 @@ register_setting(
     'homepage_carte_bg_img', // field ID
     'handle_file_bg_carte_homepage' // Callback function
 ); // end -> register : handle_file_bg_carte_homepage
+
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 4 : section_emporter --> Option 1 -- page-accueil
+/* ----------------------------------------------------------------------------- */
+// SETTINGS
+add_settings_section(
+    'section_homepage_emporter',                               // ID
+    __('Section 4 - emporter', 'section_homepage_emporter'),      // TITLE
+    'display_section_homepage_emporter',                       // CALLBACK
+    'page-accueil'                                          // PAGE
+); // end --> section : section_homepage_emporter
+
+// FIELDS : homepage_emporter_hidden ----------------------------------------------
+add_settings_field(
+    'homepage_emporter_hidden',                                // ID
+    __('Cacher la section', 'section_homepage_emporter'),      // LABEL
+    'field_homepage_emporter_hidden',                          // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_emporter'                                // SECTION ID
+); // end --> field : homepage_emporter_hidden
+
+
+// FIELDS : homepage_emporter_bg_img ----------------------------------------------
+add_settings_field(
+    'homepage_emporter_bg_img', // ID
+    __('Ajouter le logo', 'section_homepage_emporter'), // LABEL
+    'field_homepage_emporter_bg_img', // CALLBACK FUNCTION
+    'page-accueil', // MENU PAGE SLUG
+    'section_homepage_emporter' // SECTION ID
+); // end -> field : homepage_emporter_bg_img
+
+
+// FIELDS : homepage_emporter_titre -----------------------------------------------
+add_settings_field(
+    'homepage_emporter_titre',                                 // ID
+    __('Titre de la section', 'section_homepage_emporter'),    // LABEL
+    'field_homepage_emporter_titre',                           // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_emporter'                                // SECTION ID
+); // end --> field : homepage_emporter_titre
+
+// FIELDS : homepage_emporter_texte -----------------------------------------------
+add_settings_field(
+    'homepage_emporter_texte',                                 // ID
+    __('Texte', 'section_homepage_emporter'),                  // LABEL
+    'field_homepage_emporter_texte',                           // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_emporter'                                // SECTION ID
+); // end --> field : homepage_emporter_texte
+
+// FIELDS : homepage_emporter_button ----------------------------------------------
+add_settings_field(
+    'homepage_emporter_button',                                // ID
+    __('Ajouter bouton', 'section_homepage_emporter'),         // LABEL
+    'field_homepage_emporter_button',                          // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_emporter'                                 // SECTION ID
+); // end --> field : homepage_emporter_button
+
+
+// REGISTER : section_homepage_emporter -------------------------------------------
+register_setting('group-page-accueil', 'homepage_emporter_hidden');
+register_setting('group-page-accueil', 'homepage_emporter_affiche_img');
+register_setting('group-page-accueil', 'homepage_emporter_titre');
+register_setting('group-page-accueil', 'homepage_emporter_texte');
+register_setting('group-page-accueil', 'homepage_emporter_btn_actif');
+register_setting('group-page-accueil', 'homepage_emporter_btn_txt');
+register_setting('group-page-accueil', 'homepage_emporter_btn_url');
+
+// REGISTER : homepage_emporter_bg_img
+register_setting(
+    'group-page-accueil',    // group (element display in the form)
+    'homepage_emporter_bg_img', // field ID
+    'handle_file_bg_emporter_homepage' // Callback function
+); // end -> register : handle_file_bg_emporter_homepage
+
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 5 : section_event --> Option 1 -- page-accueil
+/* ----------------------------------------------------------------------------- */
+// SETTINGS
+add_settings_section(
+    'section_homepage_event',                               // ID
+    __('Section 5 - évenement', 'section_homepage_event'),  // TITLE
+    'display_section_homepage_event',                       // CALLBACK
+    'page-accueil'                                          // PAGE
+); // end --> section : section_homepage_event
+
+// FIELDS : homepage_event_hidden ----------------------------------------------
+add_settings_field(
+    'homepage_event_hidden',                                // ID
+    __('Cacher la section', 'section_homepage_event'),      // LABEL
+    'field_homepage_event_hidden',                          // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_event'                                // SECTION ID
+); // end --> field : homepage_event_hidden
+
+
+// FIELDS : homepage_event_bg_img ----------------------------------------------
+add_settings_field(
+    'homepage_event_bg_img', // ID
+    __('Ajouter le logo', 'section_homepage_event'), // LABEL
+    'field_homepage_event_bg_img', // CALLBACK FUNCTION
+    'page-accueil', // MENU PAGE SLUG
+    'section_homepage_event' // SECTION ID
+); // end -> field : homepage_event_bg_img
+
+
+// FIELDS : homepage_event_titre -----------------------------------------------
+add_settings_field(
+    'homepage_event_titre',                                 // ID
+    __('Titre de la section', 'section_homepage_event'),    // LABEL
+    'field_homepage_event_titre',                           // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_event'                                // SECTION ID
+); // end --> field : homepage_event_titre
+
+// FIELDS : homepage_event_texte -----------------------------------------------
+add_settings_field(
+    'homepage_event_texte',                                 // ID
+    __('Texte', 'section_homepage_event'),                  // LABEL
+    'field_homepage_event_texte',                           // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_event'                                // SECTION ID
+); // end --> field : homepage_event_texte
+
+// FIELDS : homepage_event_button ----------------------------------------------
+add_settings_field(
+    'homepage_event_button',                                // ID
+    __('Ajouter bouton', 'section_homepage_event'),         // LABEL
+    'field_homepage_event_button',                          // CALLBACK FUNCTION
+    'page-accueil',                                         // MENU PAGE SLUG
+    'section_homepage_event'                                // SECTION ID
+); // end --> field : homepage_event_button
+
+
+// REGISTER : section_homepage_event -------------------------------------------
+register_setting('group-page-accueil', 'homepage_event_hidden');
+register_setting('group-page-accueil', 'homepage_event_affiche_img');
+register_setting('group-page-accueil', 'homepage_event_titre');
+register_setting('group-page-accueil', 'homepage_event_texte');
+register_setting('group-page-accueil', 'homepage_event_btn_actif');
+register_setting('group-page-accueil', 'homepage_event_btn_txt');
+register_setting('group-page-accueil', 'homepage_event_btn_url');
+
+// REGISTER : homepage_event_bg_img
+register_setting(
+    'group-page-accueil',               // group (element display in the form)
+    'homepage_event_bg_img',            // field ID
+    'handle_file_bg_event_homepage'     // Callback function
+); // end -> register : handle_file_bg_event_homepage
