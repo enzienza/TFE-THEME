@@ -130,7 +130,7 @@ require get_template_directory() .'/functions/custom-admin.php';
 
 require get_template_directory().'/functions/page/pekin-paris.php';
 require get_template_directory().'/functions/page/submenu-pekinparis.php';
-// require get_template_directory().'/functions/page/formule-buffet.php';
+require get_template_directory().'/functions/page/formule-buffet.php';
 
 // test-upload
 // require get_template_directory().'/functions/image-theme.php';

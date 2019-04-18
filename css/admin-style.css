@@ -74,7 +74,9 @@ Version: 1.0
     border-collapse: collapse;
 }
 
-.table-hour .day, .table-hour .service, .table-hour .open,
+.table-hour .day,
+.table-hour .service,
+.table-hour .open,
 .item-hour-day td{
     border: 1px solid #ccc;
 }
@@ -98,27 +100,29 @@ Version: 1.0
 /* CUSTOM ADMIN PAGE FORMULE */
 /* -------------------------------------------------------------------------- */
 
-.tarif input[type="text"]{
+.backend-tarif input[type="text"]{
     width: 100px;
 }
 
-.table-tarif {
+.backend-table-tarif {
     border-collapse: collapse;
 }
 
-.table-tarif .day, .table-tarif .tarif{
+.backend-table-tarif .backend-day, 
+.backend-table-tarif
+.backend-tarif{
     border: 1px solid #ccc;
 }
 
-.table-tarif thead tr .day{
+.backend-table-tarif thead tr .backend-day{
     width: 100px;
 }
 
-.table-tarif thead tr .tarif{
+.backend-table-tarif thead tr .backend-tarif{
     width: 150px;
 }
 
-.table-tarif th{
+.backend-table-tarif th{
     padding: 10px 0;
     text-align: center;
     font-weight: bold;
