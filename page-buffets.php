@@ -80,33 +80,116 @@
                     <h3>Midi</h3>
                     <table class="table-tarif">
                         <tbody>
+                            <!-- tarif-day : lundi -->
                             <tr class="tarif-day">
                                 <td class="jour">Lundi</td>
-                                <td class="prix"><?php echo get_option('sans_lundi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_lundi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_lundi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mardi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mardi</td>
-                                <td class="prix"><?php echo get_option('sans_mardi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_mardi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_mardi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mercredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mercredi</td>
-                                <td class="prix"><?php echo get_option('sans_mercredi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_mercredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_mercredi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : jeudi -->
                             <tr class="tarif-day">
                                 <td class="jour">Jeudi</td>
-                                <td class="prix"><?php echo get_option('sans_jeudi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_jeudi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_jeudi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : vendredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Vendredi</td>
-                                <td class="prix"><?php echo get_option('sans_vendredi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_vendredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_vendredi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : samedi -->
                             <tr class="tarif-day">
                                 <td class="jour">Samedi</td>
-                                <td class="prix"><?php echo get_option('sans_samedi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_samedi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_samedi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : dimanche -->
                             <tr class="tarif-day">
-                                <td class="jour">dimanche</td>
-                                <td class="prix"><?php echo get_option('sans_dimanche_midi'); ?> €</td>
+                                <td class="jour">Dimanche</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_dimanche_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_dimanche_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
                         </tbody>
                     </table><!-- / .table-tarif -->
@@ -115,33 +198,116 @@
                     <h3>Soir</h3>
                     <table class="table-tarif">
                         <tbody>
+                            <!-- tarif-day : lundi -->
                             <tr class="tarif-day">
                                 <td class="jour">Lundi</td>
-                                <td class="prix"><?php echo get_option('sans_lundi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_lundi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_lundi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mardi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mardi</td>
-                                <td class="prix"><?php echo get_option('sans_mardi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_mardi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_mardi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mercredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mercredi</td>
-                                <td class="prix"><?php echo get_option('sans_mercredi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_mercredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_mercredi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : jeudi -->
                             <tr class="tarif-day">
                                 <td class="jour">Jeudi</td>
-                                <td class="prix"><?php echo get_option('sans_jeudi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_jeudi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_jeudi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : vendredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Vendredi</td>
-                                <td class="prix"><?php echo get_option('sans_vendredi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_vendredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_vendredi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : samedi -->
                             <tr class="tarif-day">
                                 <td class="jour">Samedi</td>
-                                <td class="prix"><?php echo get_option('sans_samedi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_samedi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_samedi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : dimanche -->
                             <tr class="tarif-day">
-                                <td class="jour">dimanche</td>
-                                <td class="prix"><?php echo get_option('sans_dimanche_soir'); ?> €</td>
+                                <td class="jour">Dimanche</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('sans_dimanche_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('sans_dimanche_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
                         </tbody>
                     </table><!-- / .table-tarif -->
@@ -218,33 +384,116 @@
                     <h3>Midi</h3>
                     <table class="table-tarif">
                         <tbody>
+                            <!-- tarif-day : lundi -->
                             <tr class="tarif-day">
                                 <td class="jour">Lundi</td>
-                                <td class="prix"><?php echo get_option('avec_lundi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_lundi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_lundi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mardi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mardi</td>
-                                <td class="prix"><?php echo get_option('avec_mardi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_mardi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_mardi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mercredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mercredi</td>
-                                <td class="prix"><?php echo get_option('avec_mercredi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_mercredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_mercredi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : jeudi -->
                             <tr class="tarif-day">
                                 <td class="jour">Jeudi</td>
-                                <td class="prix"><?php echo get_option('avec_jeudi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_jeudi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_jeudi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : vendredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Vendredi</td>
-                                <td class="prix"><?php echo get_option('avec_vendredi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_vendredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_vendredi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : samedi -->
                             <tr class="tarif-day">
                                 <td class="jour">Samedi</td>
-                                <td class="prix"><?php echo get_option('avec_samedi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_samedi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_samedi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : dimanche -->
                             <tr class="tarif-day">
-                                <td class="jour">dimanche</td>
-                                <td class="prix"><?php echo get_option('avec_dimanche_midi'); ?> €</td>
+                                <td class="jour">Dimanche</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_dimanche_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_dimanche_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
                         </tbody>
                     </table><!-- / .table-tarif -->
@@ -253,33 +502,116 @@
                     <h3>Soir</h3>
                     <table class="table-tarif">
                         <tbody>
+                            <!-- tarif-day : lundi -->
                             <tr class="tarif-day">
                                 <td class="jour">Lundi</td>
-                                <td class="prix"><?php echo get_option('avec_lundi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_lundi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_lundi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mardi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mardi</td>
-                                <td class="prix"><?php echo get_option('avec_mardi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_mardi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_mardi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mercredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mercredi</td>
-                                <td class="prix"><?php echo get_option('avec_mercredi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_mercredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_mercredi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : jeudi -->
                             <tr class="tarif-day">
                                 <td class="jour">Jeudi</td>
-                                <td class="prix"><?php echo get_option('avec_jeudi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_jeudi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_jeudi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : vendredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Vendredi</td>
-                                <td class="prix"><?php echo get_option('avec_vendredi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_vendredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_vendredi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : samedi -->
                             <tr class="tarif-day">
                                 <td class="jour">Samedi</td>
-                                <td class="prix"><?php echo get_option('avec_samedi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_samedi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_samedi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : dimanche -->
                             <tr class="tarif-day">
-                                <td class="jour">dimanche</td>
-                                <td class="prix"><?php echo get_option('avec_dimanche_soir'); ?> €</td>
+                                <td class="jour">Dimanche</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('avec_dimanche_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('avec_dimanche_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
                         </tbody>
                     </table><!-- / .table-tarif -->
@@ -356,33 +688,116 @@
                     <h3>Midi</h3>
                     <table class="table-tarif">
                         <tbody>
+                            <!-- tarif-day : lundi -->
                             <tr class="tarif-day">
                                 <td class="jour">Lundi</td>
-                                <td class="prix"><?php echo get_option('full_lundi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_lundi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_lundi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mardi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mardi</td>
-                                <td class="prix"><?php echo get_option('full_mardi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_mardi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_mardi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mercredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mercredi</td>
-                                <td class="prix"><?php echo get_option('full_mercredi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_mercredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_mercredi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : jeudi -->
                             <tr class="tarif-day">
                                 <td class="jour">Jeudi</td>
-                                <td class="prix"><?php echo get_option('full_jeudi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_jeudi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_jeudi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : vendredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Vendredi</td>
-                                <td class="prix"><?php echo get_option('full_vendredi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_vendredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_vendredi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : samedi -->
                             <tr class="tarif-day">
                                 <td class="jour">Samedi</td>
-                                <td class="prix"><?php echo get_option('full_samedi_midi'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_samedi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_samedi_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : dimanche -->
                             <tr class="tarif-day">
-                                <td class="jour">dimanche</td>
-                                <td class="prix"><?php echo get_option('full_dimanche_midi'); ?> €</td>
+                                <td class="jour">Dimanche</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_dimanche_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_dimanche_midi'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
                         </tbody>
                     </table><!-- / .table-tarif -->
@@ -391,33 +806,116 @@
                     <h3>Soir</h3>
                     <table class="table-tarif">
                         <tbody>
+                            <!-- tarif-day : lundi -->
                             <tr class="tarif-day">
                                 <td class="jour">Lundi</td>
-                                <td class="prix"><?php echo get_option('full_lundi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_lundi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_lundi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mardi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mardi</td>
-                                <td class="prix"><?php echo get_option('full_mardi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_mardi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_mardi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : mercredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Mercredi</td>
-                                <td class="prix"><?php echo get_option('full_mercredi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_mercredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_mercredi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : jeudi -->
                             <tr class="tarif-day">
                                 <td class="jour">Jeudi</td>
-                                <td class="prix"><?php echo get_option('full_jeudi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_jeudi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_jeudi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : vendredi -->
                             <tr class="tarif-day">
                                 <td class="jour">Vendredi</td>
-                                <td class="prix"><?php echo get_option('full_vendredi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_vendredi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_vendredi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : samedi -->
                             <tr class="tarif-day">
                                 <td class="jour">Samedi</td>
-                                <td class="prix"><?php echo get_option('full_samedi_soir'); ?> €</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_samedi_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_samedi_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
+
+                            <!-- tarif-day : dimanche -->
                             <tr class="tarif-day">
-                                <td class="jour">dimanche</td>
-                                <td class="prix"><?php echo get_option('full_dimanche_soir'); ?> €</td>
+                                <td class="jour">Dimanche</td>
+                                <!-- item-drink -->
+                                <?php
+                                if(checked(1, get_option('full_dimanche_fermer'), false)){
+                                    ?>
+                                        <td class="prix"> - </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <td class="prix"><?php echo get_option('full_dimanche_soir'); ?> €</td>
+                                    <?php
+                                } ?>
                             </tr><!-- / .tarif-day -->
                         </tbody>
                     </table><!-- / .table-tarif -->

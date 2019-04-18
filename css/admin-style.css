@@ -108,13 +108,14 @@ Version: 1.0
     border-collapse: collapse;
 }
 
-.backend-table-tarif .backend-day, 
-.backend-table-tarif
-.backend-tarif{
+.backend-table-tarif .backend-day,
+.backend-table-tarif .backend-tarif,
+.backend-table-tarif .backend-fermer{
     border: 1px solid #ccc;
 }
 
-.backend-table-tarif thead tr .backend-day{
+.backend-table-tarif thead tr .backend-day,
+.backend-table-tarif thead tr .backend-fermer{
     width: 100px;
 }
 

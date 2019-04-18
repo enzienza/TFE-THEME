@@ -54,27 +54,34 @@ register_setting('group-avec-boissons', 'avec_digestif');
 /* --- tarif - lundi --- */
 register_setting('group-avec-boissons', 'avec_lundi_midi');
 register_setting('group-avec-boissons', 'avec_lundi_soir');
+register_setting('group-avec-boissons', 'avec_lundi_fermer');
 
 /* --- tarif - mardi --- */
 register_setting('group-avec-boissons', 'avec_mardi_midi');
 register_setting('group-avec-boissons', 'avec_mardi_soir');
+register_setting('group-avec-boissons', 'avec_mardi_fermer');
 
 /* --- tarif - mercredi --- */
 register_setting('group-avec-boissons', 'avec_mercredi_midi');
 register_setting('group-avec-boissons', 'avec_mercredi_soir');
+register_setting('group-avec-boissons', 'avec_mercredi_fermer');
 
 /* --- tarif - jeudi --- */
 register_setting('group-avec-boissons', 'avec_jeudi_midi');
 register_setting('group-avec-boissons', 'avec_jeudi_soir');
+register_setting('group-avec-boissons', 'avec_jeudi_fermer');
 
 /* --- tarif - vendredi --- */
 register_setting('group-avec-boissons', 'avec_vendredi_midi');
 register_setting('group-avec-boissons', 'avec_vendredi_soir');
+register_setting('group-avec-boissons', 'avec_vendredi_fermer');
 
 /* --- tarif - samedi --- */
 register_setting('group-avec-boissons', 'avec_samedi_midi');
 register_setting('group-avec-boissons', 'avec_samedi_soir');
+register_setting('group-avec-boissons', 'avec_samedi_fermer');
 
 /* --- tarif - dimanche --- */
 register_setting('group-avec-boissons', 'avec_dimanche_midi');
 register_setting('group-avec-boissons', 'avec_dimanche_soir');
+register_setting('group-avec-boissons', 'avec_dimanche_fermer');
