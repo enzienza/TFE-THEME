@@ -99,47 +99,47 @@ function theme_page_option_theme(){
 
                     if($_GET['tab'] == 'page-buffet'){
                         ?>
-                        <h3>Page Buffet</h3>
-                        <div class="">
-                            <?php //settings_fields( 'group-page-buffet' );?>
+                        <h3 class="wp-heading-inline">Page Buffet</h3>
+                        <div class="form-custom">
+                            <?php settings_fields( 'group-page-buffet' );?>
                             <?php do_settings_sections( 'page-buffet' ); ?>
-                        </div>
+                        </div><!-- / .form-custom -->
                         <?php
 
                     } elseif($_GET['tab'] == 'page-carte'){
                         ?>
-                            <h3>Page service à la carte</h3>
-                            <div class="" >
+                            <h3 class="wp-heading-inline">Page service à la carte</h3>
+                            <div class="form-custom" >
                                 <?php //settings_fields( 'group-page-carte' );?>
                                 <?php do_settings_sections( 'page-carte' ); ?>
-                            </div>
+                            </div><!-- / .form-custom -->
                         <?php
 
                     } elseif($_GET['tab'] == 'page-emporter'){
                         ?>
-                            <h3>Page à emporter</h3>
-                            <div class="" >
+                            <h3 class="wp-heading-inline">Page à emporter</h3>
+                            <div class="form-custom" >
                                 <?php //settings_fields( 'group-page-emporter' );?>
                                 <?php do_settings_sections( 'page-emporter' ); ?>
-                            </div>
+                            </div><!-- / .form-custom -->
                         <?php
 
                     } elseif($_GET['tab'] == 'page-event'){
                         ?>
-                            <h3>Page des évènements</h3>
-                            <div class="" >
+                            <h3 class="wp-heading-inline">Page des évènements</h3>
+                            <div class="form-custom" >
                                 <?php //settings_fields( 'group-page-event' );?>
                                 <?php do_settings_sections( 'page-event' ); ?>
-                            </div>
+                            </div><!-- / .form-custom -->
                         <?php
 
                     } elseif($_GET['tab'] == 'page-contact'){
                         ?>
-                            <h3>Page de contact</h3>
-                            <div class="" >
+                            <h3 class="wp-heading-inline">Page de contact</h3>
+                            <div class="form-custom" >
                                 <?php //settings_fields( 'group-page-contact' );?>
                                 <?php do_settings_sections( 'page-contact' ); ?>
-                            </div>
+                            </div><!-- / .form-custom -->
                         <?php
 
                     } else {
@@ -148,14 +148,14 @@ function theme_page_option_theme(){
                         <div class="form-custom">
                             <?php settings_fields( 'group-page-accueil' );?>
                             <?php do_settings_sections( 'page-accueil' ); ?>
-                        </div>
+                        </div><!-- / .form-custom -->
                         <?php
                     }
 
                     ?>
 
                     <?php submit_button(); ?>
-                </form><!-- / .form-custom -->
+                </form>
 
 
         </div>
@@ -179,8 +179,7 @@ function custom_settings_option_theme(){
     require get_template_directory().'/functions/page/custom-settings/page-accueil.php';
 
     // Option 2 -- page-buffet  ------------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/page-buffet.php';
-
+    require get_template_directory().'/functions/page/custom-settings/page-buffet.php';
 
     // Option 3 -- page-carte  -------------------------------------------------
     // require get_template_directory().'/functions/page/custom-settings/page-carte.php';
@@ -208,8 +207,7 @@ function custom_settings_option_theme(){
 require get_template_directory().'/functions/page/view-form/page-accueil.php';
 
 // Option 2 -- page-buffet  ----------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/page-buffet.php';
-
+require get_template_directory().'/functions/page/view-form/page-buffet.php';
 
 // Option 3 -- page-carte  -----------------------------------------------------
 // require get_template_directory().'/functions/page/view-form/page-carte.php';

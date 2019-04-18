@@ -4,7 +4,7 @@
 Name:   custom-settings - Page accueil
 Description: Fonction pour controllé les sections de la page d'accueil
              [custom_settings_option_theme]
-             => 1er onglet de la page API option-theme
+             => 1er onglet 'page-accueil' de la page API option-theme
 Author: Enza Lombardo
 Author URI: www.enzalombardo.be
 copyright : 2019 © Enza Lombardo
@@ -136,7 +136,7 @@ add_settings_field(
 // FIELDS : homepage_buffet_bg_img ----------------------------------------------
 add_settings_field(
     'homepage_buffet_bg_img', // ID
-    __('Ajouter le logo', 'section_homepage_buffet'), // LABEL
+    __('Image d\'arrière plan', 'section_homepage_buffet'), // LABEL
     'field_homepage_buffet_bg_img', // CALLBACK FUNCTION
     'page-accueil', // MENU PAGE SLUG
     'section_homepage_buffet' // SECTION ID
@@ -212,7 +212,7 @@ add_settings_field(
 // FIELDS : homepage_carte_bg_img ----------------------------------------------
 add_settings_field(
     'homepage_carte_bg_img', // ID
-    __('Ajouter le logo', 'section_homepage_carte'), // LABEL
+    __('Image d\'arrière plan', 'section_homepage_carte'), // LABEL
     'field_homepage_carte_bg_img', // CALLBACK FUNCTION
     'page-accueil', // MENU PAGE SLUG
     'section_homepage_carte' // SECTION ID
@@ -288,7 +288,7 @@ add_settings_field(
 // FIELDS : homepage_emporter_bg_img ----------------------------------------------
 add_settings_field(
     'homepage_emporter_bg_img', // ID
-    __('Ajouter le logo', 'section_homepage_emporter'), // LABEL
+    __('Image d\'arrière plan', 'section_homepage_emporter'), // LABEL
     'field_homepage_emporter_bg_img', // CALLBACK FUNCTION
     'page-accueil', // MENU PAGE SLUG
     'section_homepage_emporter' // SECTION ID
@@ -364,7 +364,7 @@ add_settings_field(
 // FIELDS : homepage_event_bg_img ----------------------------------------------
 add_settings_field(
     'homepage_event_bg_img', // ID
-    __('Ajouter le logo', 'section_homepage_event'), // LABEL
+    __('Image d\'arrière plan', 'section_homepage_event'), // LABEL
     'field_homepage_event_bg_img', // CALLBACK FUNCTION
     'page-accueil', // MENU PAGE SLUG
     'section_homepage_event' // SECTION ID

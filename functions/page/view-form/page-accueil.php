@@ -3,7 +3,7 @@
 /*
 Name:   [view-form] -> Page accueil
 Description: Element de formulaire pour les sections de la page d'accueil
-             => 1er onglet de la page API option-theme
+             => 1er onglet 'page-accueil' de la page API option-theme
 Author: Enza Lombardo
 Author URI: www.enzalombardo.be
 copyright : 2019 © Enza Lombardo
