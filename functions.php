@@ -145,3 +145,6 @@ require get_template_directory().'/functions/page/formule-buffet.php';
 require get_template_directory(). '/functions/cpt/cpt-carte.php';
 require get_template_directory(). '/functions/cpt/cpt-emporter.php';
 require get_template_directory(). '/functions/cpt/cpt-event.php';
+
+
+require get_template_directory(). '/functions/cpt/cpt-album.php';
