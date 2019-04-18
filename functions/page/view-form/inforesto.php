@@ -23,8 +23,10 @@ Version: 1.0
 // SECTION 1 : section_location --> Option 1 -- info-resto
 /* ----------------------------------------------------------------------------- */
 
+// CALLBACK SETTINGS : section_location
 function display_section_location(){}
 
+// CALLBACK FIELDS : inforesto_adresse
 function field_inforesto_adresse(){
     $inforesto_adresse = esc_attr(get_option('inforesto_adresse'));
     ?>
@@ -32,6 +34,7 @@ function field_inforesto_adresse(){
     <?php
 } //END => field_inforesto_adresse
 
+// CALLBACK FIELDS : inforesto_map
 function field_inforesto_map(){
     $inforesto_map = esc_attr(get_option('inforesto_map'));
     ?>
@@ -39,6 +42,7 @@ function field_inforesto_map(){
     <?php
 } //END => field_inforesto_map
 
+// CALLBACK FIELDS : inforesto_phone
 function field_inforesto_phone(){
     $inforesto_phone = esc_attr(get_option('inforesto_phone'));
     ?>
@@ -51,9 +55,10 @@ function field_inforesto_phone(){
 /* ----------------------------------------------------------------------------- */
 // SECTION 2 : section_social --> Option 1 -- info-resto
 /* ----------------------------------------------------------------------------- */
-
+// CALLBACK SETTINGS : section_social
 function display_section_social(){}
 
+// CALLBACK FIELDS : inforesto_facebook
 function field_inforesto_facebook(){
     $yes_facebbok = esc_attr(get_option('yes_facebbok'));
     $inforesto_facebook = esc_attr(get_option('inforesto_facebook'));
@@ -63,6 +68,7 @@ function field_inforesto_facebook(){
     <?php
 } // END => field_inforesto_facebook
 
+// CALLBACK FIELDS : inforesto_twitter
 function field_inforesto_twitter(){
     $yes_twitter = esc_attr(get_option('yes_twitter'));
     $inforesto_twitter = esc_attr(get_option('inforesto_twitter'));
@@ -72,6 +78,7 @@ function field_inforesto_twitter(){
     <?php
 } // END => field_inforesto_twitter
 
+// CALLBACK FIELDS : inforesto_instagram
 function field_inforesto_instagram(){
     $yes_instagram = esc_attr(get_option('yes_instagram'));
     $inforesto_instagram = esc_attr(get_option('inforesto_instagram'));
@@ -85,9 +92,11 @@ function field_inforesto_instagram(){
 /* ----------------------------------------------------------------------------- */
 // SECTION 3 : section_creditcard --> Option 1 -- info-resto
 /* ----------------------------------------------------------------------------- */
-function display_section_creditcard(){
 
-}
+// CALLBACK SETTINGS : section_creditcard
+function display_section_creditcard(){}
+
+// CALLBACK FIELDS : inforesto_carte
 function field_inforesto_carte(){
     $inforesto_carte_visa = esc_attr(get_option('inforesto_carte_visa'));
     $inforesto_carte_mastercard = esc_attr(get_option('inforesto_carte_mastercard'));
@@ -123,6 +132,8 @@ function field_inforesto_carte(){
 /* ----------------------------------------------------------------------------- */
 // SECTION 4 : section_uptload_inforesto --> Option 1 -- info-resto
 /* ----------------------------------------------------------------------------- */
+
+// CALLBACK REGISTER : logo_resto
 function handle_file_logo($options){
     //check if user had uploaded a file and clicked save changes button
     if(!empty($_FILES['logo_resto']['tmp_name'])){
@@ -136,10 +147,10 @@ function handle_file_logo($options){
 
 } // END => handle_file_logo
 
+// CALLBACK SETTINGS : section_uptload_inforesto
+function display_section_uptload_inforesto(){}
 
-function display_section_uptload_inforesto(){
-
-}
+// CALLBACK FIELDS : logo_resto
 function field_inforesto_logo(){
     //echo form element for file upload
 

@@ -146,7 +146,7 @@ function theme_page_option_theme(){
                         ?>
                         <h3 class="wp-heading-inline">Page Accueil</h3>
                         <div class="form-custom">
-                            <?php //settings_fields( 'group-page-accueil' );?>
+                            <?php settings_fields( 'group-page-accueil' );?>
                             <?php do_settings_sections( 'page-accueil' ); ?>
                         </div>
                         <?php
@@ -176,7 +176,7 @@ add_action('admin_init', 'custom_settings_option_theme');
 function custom_settings_option_theme(){
 
     // Option 1 -- page-accueil ------------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/page-accueil.php';
+    require get_template_directory().'/functions/page/custom-settings/page-accueil.php';
 
     // Option 2 -- page-buffet  ------------------------------------------------
     // require get_template_directory().'/functions/page/custom-settings/page-buffet.php';
@@ -205,7 +205,7 @@ function custom_settings_option_theme(){
 /* ----------------------------------------------------------------------------- */
 
 // Option 1 -- page-accueil ----------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/page-accueil.php';
+require get_template_directory().'/functions/page/view-form/page-accueil.php';
 
 // Option 2 -- page-buffet  ----------------------------------------------------
 // require get_template_directory().'/functions/page/view-form/page-buffet.php';

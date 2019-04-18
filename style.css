@@ -6592,6 +6592,24 @@ footer {
   }
 }
 
+.bg-cover {
+  background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), no-repeat fixed;
+  background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), no-repeat fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100vh;
+}
+
+.img-cover img {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  background-attachment: fixed;
+}
+
 .card-formule {
   margin-bottom: 2rem;
 }

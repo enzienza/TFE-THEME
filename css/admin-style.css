@@ -21,6 +21,14 @@ Version: 1.0
     max-height: 200px;
 }
 
+.backend-card-img-bg{
+    float: left;
+    border: 1px solid #e5e5e5;
+}
+.backend-img-bg{
+    max-width: 300px;
+    padding: 4px;
+}
 /* -------------------------------------------------------------------------- */
 /* CUSTOM ADMIN PAGE FORM */
 /* -------------------------------------------------------------------------- */
