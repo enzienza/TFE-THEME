@@ -27,7 +27,7 @@ Version: 1.0
 // CALLBACK SETTINGS -----------------------------------------------------------
 function display_section_buffetpage_cover(){}
 
-// CALLBACK REGISTER : buffetpage_cover_bg_img --------------------------------
+// CALLBACK REGISTER : buffetpage_cover_bg_img ---------------------------------
 function handle_file_bg_buffet_buffetpage($options){
     //check if user had uploaded a file and clicked save changes button
     if(!empty($_FILES['buffetpage_cover_bg_img']['tmp_name'])){
@@ -42,7 +42,7 @@ function handle_file_bg_buffet_buffetpage($options){
 } // END => handle_file_bg_buffet_buffetpage
 
 
-// CALLBACK FIELDS : buffetpage_cover_hidden ----------------------------------
+// CALLBACK FIELDS : buffetpage_cover_hidden -----------------------------------
 function field_buffetpage_cover_hidden(){
     $buffetpage_cover_hidden = esc_attr(get_option('buffetpage_cover_hidden'));
     ?>
@@ -53,7 +53,7 @@ function field_buffetpage_cover_hidden(){
     <?php
 } // END => field_buffetpage_cover_hidden
 
-// CALLBACK FIELDS : buffetpage_cover_bg_img ----------------------------------
+// CALLBACK FIELDS : buffetpage_cover_bg_img -----------------------------------
 function field_buffetpage_cover_bg_img(){
     //echo form element for file upload
 
@@ -77,7 +77,7 @@ function field_buffetpage_cover_bg_img(){
 } // END => field_buffetpage_cover_bg_img
 
 
-// CALLBARCK FIELD : field_buffetpage_cover_titre -----------------------------
+// CALLBARCK FIELD : field_buffetpage_cover_titre ------------------------------
 function field_buffetpage_cover_titre(){
     $buffetpage_cover_titre = esc_attr(get_option('buffetpage_cover_titre'));
     ?>
@@ -87,7 +87,7 @@ function field_buffetpage_cover_titre(){
     <?php
 } // END => field_buffetpage_cover_titre
 
-// CALLBARCK FIELD : field_buffetpage_cover_texte -----------------------------
+// CALLBARCK FIELD : field_buffetpage_cover_texte ------------------------------
 function field_buffetpage_cover_texte(){
     $buffetpage_cover_texte = esc_attr(get_option('buffetpage_cover_texte'));
     ?>
@@ -104,7 +104,7 @@ function field_buffetpage_cover_texte(){
 // CALLBACK SETTINGS -----------------------------------------------------------
 function display_section_buffetpage_message(){}
 
-// CALLBACK REGISTER : buffetpage_msg_img_avatar --------------------------------
+// CALLBACK REGISTER : buffetpage_msg_img_avatar -------------------------------
 function handle_file_avatar_msg_buffetpage($options){
     //check if user had uploaded a file and clicked save changes button
     if(!empty($_FILES['buffetpage_msg_img_avatar']['tmp_name'])){
@@ -118,7 +118,7 @@ function handle_file_avatar_msg_buffetpage($options){
 
 } // END => handle_file_avatar_msg_buffetpage
 
-// CALLBACK FIELDS : buffetpage_msg_hidden ----------------------------------
+// CALLBACK FIELDS : buffetpage_msg_hidden -------------------------------------
 function field_buffetpage_msg_hidden(){
     $buffetpage_msg_hidden = esc_attr(get_option('buffetpage_msg_hidden'));
     ?>
@@ -129,7 +129,7 @@ function field_buffetpage_msg_hidden(){
     <?php
 } // END => field_buffetpage_msg_hidden
 
-// CALLBACK FIELDS : buffetpage_msg_img_avatar ----------------------------------
+// CALLBACK FIELDS : buffetpage_msg_img_avatar ---------------------------------
 function field_buffetpage_msg_img_avatar(){
     //echo form element for file upload
 
@@ -152,7 +152,7 @@ function field_buffetpage_msg_img_avatar(){
     <?php
 } // END => field_buffetpage_msg_img_avatar
 
-// CALLBARCK FIELD : field_buffetpage_message_texte -----------------------------
+// CALLBARCK FIELD : field_buffetpage_message_texte ----------------------------
 function field_buffetpage_msg_titre(){
     $buffetpage_msg_titre = esc_attr(get_option('buffetpage_msg_titre'));
     ?>
@@ -162,7 +162,7 @@ function field_buffetpage_msg_titre(){
     <?php
 } // END => field_buffetpage_msg_titre
 
-// CALLBARCK FIELD : field_buffetpage_msg_element -----------------------------
+// CALLBARCK FIELD : field_buffetpage_msg_element ------------------------------
 function field_buffetpage_msg_element(){
 
     $buffetpage_msg_element_entrefroide = esc_attr(get_option('buffetpage_msg_element_entrefroide'));
@@ -204,8 +204,7 @@ function field_buffetpage_msn_button(){
 /* ----------------------------------------------------------------------------- */
 function display_section_buffetpage_desc(){}
 
-
-// CALLBACK FIELDS : buffetpage_desc_hidden ----------------------------------
+// CALLBACK FIELDS : buffetpage_desc_hidden ------------------------------------
 function field_buffetpage_desc_hidden(){
     $buffetpage_desc_hidden = esc_attr(get_option('buffetpage_desc_hidden'));
     ?>
@@ -226,3 +225,123 @@ function field_buffetpage_desc_txt_content(){
 
     <?php
 } // END => field_buffetpage_desc_txt_content
+
+// CALLBACK REGISTER : buffetpage_desc_img_uno ---------------------------------
+function handle_file_unoimg_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_desc_img_uno']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_desc_img_uno'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_desc_img_uno']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_desc_img_uno');
+
+} // END => handle_file_unoimg_buffetpage
+
+// CALLBACK REGISTER : buffetpage_desc_img_due ---------------------------------
+function handle_file_dueimg_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_desc_img_due']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_desc_img_due'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_desc_img_due']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_desc_img_due');
+
+} // END => handle_file_dueimg_buffetpage
+
+// CALLBACK REGISTER : buffetpage_desc_img_tre ---------------------------------
+function handle_file_treimg_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_desc_img_tre']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_desc_img_tre'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_desc_img_tre']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_desc_img_tre');
+
+} // END => handle_file_treimg_buffetpage
+
+// CALLBACK REGISTER : buffetpage_desc_img_quattro -----------------------------
+function handle_file_quattroimg_buffetpage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['buffetpage_desc_img_quattro']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_desc_img_quattro'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['buffetpage_desc_img_quattro']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('buffetpage_desc_img_quattro');
+
+} // END => handle_file_quattroimg_buffetpage
+
+// CALLBACK FIELDS : buffetpage_desc_img ---------------------------------------
+function field_buffetpage_desc_img(){
+    //echo form element for file upload
+
+    ?>
+    <div class="backend-item-img-buffet">
+        <h4>1ère image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_desc_img_uno'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name='buffetpage_desc_img_uno' id='buffetpage_desc_img_uno' value="<?php echo get_option('buffetpage_desc_img_uno'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_desc_img_uno'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+
+    <div class="backend-item-img-buffet">
+        <h4>2e image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_desc_img_due'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name='buffetpage_desc_img_due' id='buffetpage_desc_img_due' value="<?php echo get_option('buffetpage_desc_img_due'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_desc_img_due'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+
+    <div class="backend-item-img-buffet">
+        <h4>3e image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_desc_img_tre'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name='buffetpage_desc_img_tre' id='buffetpage_desc_img_tre' value="<?php echo get_option('buffetpage_desc_img_tre'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_desc_img_tre'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+
+    <div class="backend-item-img-buffet">
+        <h4>4e image buffet</h4>
+        <div class="backend-card-img-bg">
+            <img src="<?php echo get_option('buffetpage_desc_img_quattro'); ?>" alt="" class="backend-img-buffet">
+        </div>
+
+        <div class="backend-path-img-buffet">
+            <input type="file" name='buffetpage_desc_img_quattro' id='buffetpage_desc_img_quattro' value="<?php echo get_option('buffetpage_desc_img_quattro'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('buffetpage_desc_img_quattro'); ?>" />
+            </p>
+        </div>
+    </div><!-- / .backend-item-img-buffet -->
+
+    <?php
+} // END => field_buffetpage_desc_img

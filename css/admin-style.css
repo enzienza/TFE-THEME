@@ -163,6 +163,26 @@ Version: 1.0
     margin-right: 5px;
 }
 
+.backend-img-buffet{
+    max-width: 300px;
+    max-height: 150px;
+}
+
+.backend-item-img-buffet{
+    display: table-cell;
+    border-right: 1px solid #e5e5e5;
+    padding: 10px;
+}
+
+.backend-item-img-buffet:last-child{
+    border: none;
+}
+
+
+.backend-path-img-buffet input[type="text"]{
+    width: 100%;
+}
+
 /* -------------------------------------------------------------------------- */
 /* CUSTOM PAGE ALBUM */
 /* -------------------------------------------------------------------------- */

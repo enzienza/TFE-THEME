@@ -39,7 +39,6 @@
     }
  ?>
 
-
 <!-- START : section-buffetpage_message -->
 <?php
      // SI buffetpage_cover_hidden EST COCHE
@@ -113,30 +112,49 @@
   ?>
 
 <!-- START : section-description-buffet -->
-<section id="section-description-buffet" class="container">
-    <h2>Description Buffet</h2>
-    <div class="row">
-        <div class="col-md-6 col-12 box-left">
-            <p></p>
-        </div>
-        <div class="col-md-6 col-12 box-right">
+<?php
+    // SI buffetpage_desc_hidden EST COCHE
+    // => Alors il n'y a pas de section
+
+    if(checked(1, get_option('buffetpage_desc_hidden'), false)) {
+        ?><?php
+    } else {
+        // SINON
+        // => Afficher la section
+        ?>
+
+        <section id="section-description-buffet" class="container">
+            <h2>Description Buffet</h2>
             <div class="row">
-                <div class="col-12 img-buffet">
-                    <img src="" alt="">
+                <div class="col-md-6 col-12 box-left">
+                    <p class="description-buffet">
+                        <?php echo get_option('buffetpage_desc_txt_content'); ?>
+                    </p>
                 </div>
-                <div class="col-12 img-buffet">
-                    <img src="" alt="">
-                </div>
-                <div class="col-12 img-buffet">
-                    <img src="" alt="">
-                </div>
-                <div class="col-12 img-buffet">
-                    <img src="" alt="">
+                <div class="col-md-6 col-12 box-right">
+                    <div class="row">
+                        <div class="col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_desc_img_uno'); ?>" alt="Buffet">
+                        </div>
+                        <div class="col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_desc_img_due'); ?>" alt="Buffet">
+                        </div>
+                        <div class="col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_desc_img_tre'); ?>" alt="Buffet">
+                        </div>
+                        <div class="col-12 img-buffet">
+                            <img src="<?php echo get_option('buffetpage_desc_img_quattro'); ?>" alt="Buffet">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+
+        <?php
+    }
+ ?>
+
 
 <!-- START : section-tarif-buffet -->
 <section id="section-tarif-buffet">
