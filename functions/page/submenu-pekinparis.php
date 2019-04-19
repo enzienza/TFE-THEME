@@ -181,6 +181,7 @@ function custom_settings_option_theme(){
     // Option 2 -- page-buffet  ------------------------------------------------
     require get_template_directory().'/functions/page/custom-settings/page-buffet.php';
 
+
     // Option 3 -- page-carte  -------------------------------------------------
     // require get_template_directory().'/functions/page/custom-settings/page-carte.php';
 
@@ -208,6 +209,7 @@ require get_template_directory().'/functions/page/view-form/page-accueil.php';
 
 // Option 2 -- page-buffet  ----------------------------------------------------
 require get_template_directory().'/functions/page/view-form/page-buffet.php';
+
 
 // Option 3 -- page-carte  -----------------------------------------------------
 // require get_template_directory().'/functions/page/view-form/page-carte.php';

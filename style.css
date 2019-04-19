@@ -6623,3 +6623,11 @@ footer {
   line-height: 2rem;
   margin: 10px 10px;
 }
+
+.info-element-buffet {
+  margin-right: 5px;
+}
+
+.msg-avatar {
+  width: 50%;
+}

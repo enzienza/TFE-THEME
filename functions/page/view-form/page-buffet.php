@@ -15,6 +15,8 @@ Version: 1.0
 
     section 1 : cover
     section 2 : message
+    section 3 : description buffet
+    section 4 : tarif
 
 */
 
@@ -102,61 +104,125 @@ function field_buffetpage_cover_texte(){
 // CALLBACK SETTINGS -----------------------------------------------------------
 function display_section_buffetpage_message(){}
 
-// CALLBACK REGISTER : buffetpage_message_avatar --------------------------------
-function handle_file_msg_avatar_buffetpage($options){
+// CALLBACK REGISTER : buffetpage_msg_img_avatar --------------------------------
+function handle_file_avatar_msg_buffetpage($options){
     //check if user had uploaded a file and clicked save changes button
-    if(!empty($_FILES['buffetpage_message_avatar']['tmp_name'])){
-        $urls = wp_handle_upload($_FILES['buffetpage_message_avatar'], array('test_form' => FALSE));
+    if(!empty($_FILES['buffetpage_msg_img_avatar']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['buffetpage_msg_img_avatar'], array('test_form' => FALSE));
         $temp = $urls['url'];
         return $temp;
-    } // end -> if(!empty($_FILES['buffetpage_message_avatar']['tmp_name']))
+    } // end -> if(!empty($_FILES['buffetpage_msg_img_avatar']['tmp_name']))
 
     //no upload. old file url is the new value.
-    return get_option('buffetpage_message_avatar');
+    return get_option('buffetpage_msg_img_avatar');
 
-} // END => handle_file_msg_avatar_buffetpage
+} // END => handle_file_avatar_msg_buffetpage
 
-
-// CALLBACK FIELDS : buffetpage_message_hidden ----------------------------------
-function field_buffetpage_message_hidden(){
-    $buffetpage_message_hidden = esc_attr(get_option('buffetpage_message_hidden'));
+// CALLBACK FIELDS : buffetpage_msg_hidden ----------------------------------
+function field_buffetpage_msg_hidden(){
+    $buffetpage_msg_hidden = esc_attr(get_option('buffetpage_msg_hidden'));
     ?>
         <div class="">
-            <input type="checkbox" id="buffetpage_message_hidden" name="buffetpage_message_hidden" value="1" <?php checked(1, get_option('buffetpage_message_hidden'), true); ?> />
+            <input type="checkbox" id="buffetpage_msg_hidden" name="buffetpage_msg_hidden" value="1" <?php checked(1, get_option('buffetpage_msg_hidden'), true); ?> />
             <span class="info">Masquer cette section sur la page d'acceuil</span>
         </div>
     <?php
-} // END => field_buffetpage_message_hidden
+} // END => field_buffetpage_msg_hidden
 
-// CALLBACK FIELDS : buffetpage_message_avatar ----------------------------------
-function field_buffetpage_message_avatar(){
+// CALLBACK FIELDS : buffetpage_msg_img_avatar ----------------------------------
+function field_buffetpage_msg_img_avatar(){
     //echo form element for file upload
 
-    $buffetpage_message_affiche_img = esc_attr(get_option('buffetpage_message_affiche_img'));
+    $buffetpage_msg_affiche_avatar = esc_attr(get_option('buffetpage_msg_affiche_avatar'));
     ?>
 
     <div class="">
         <span>
-            <input type="checkbox" id="buffetpage_message_affiche_img" name="buffetpage_message_affiche_img" value="1" <?php checked(1, get_option('buffetpage_message_affiche_img'), true); ?> />
-            <span class="info">Ajouter une image d'arrière-plan pour cette section</span>
+            <input type="checkbox" id="buffetpage_msg_affiche_avatar" name="buffetpage_msg_affiche_avatar" value="1" <?php checked(1, get_option('buffetpage_msg_affiche_avatar'), true); ?> />
+            <span class="info">Ajouter l'avatar pour cette section</span>
         </span>
-        <input type="file" name='buffetpage_message_avatar' id='buffetpage_message_avatar' value="<?php echo get_option('buffetpage_message_avatar'); ?>" />
+        <input type="file" name='buffetpage_msg_img_avatar' id='buffetpage_msg_img_avatar' value="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" />
         <p>
-            <input type="text" name="" value="<?php echo get_option('buffetpage_message_avatar'); ?>" />
+            <input type="text" name="" value="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" />
         </p>
         <div class="backend-card-img-bg">
-            <img src="<?php echo get_option('buffetpage_message_avatar'); ?>" alt="" class="backend-img-bg">
+            <img src="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" alt="" class="backend-img-bg">
         </div>
     </div>
     <?php
-} // END => field_buffetpage_message_avatar
+} // END => field_buffetpage_msg_img_avatar
 
 // CALLBARCK FIELD : field_buffetpage_message_texte -----------------------------
-function field_buffetpage_message_texte(){
-    $buffetpage_message_texte = esc_attr(get_option('buffetpage_message_texte'));
+function field_buffetpage_msg_titre(){
+    $buffetpage_msg_titre = esc_attr(get_option('buffetpage_msg_titre'));
     ?>
     <div class="">
-        <textarea id="buffetpage_message_texte" name="buffetpage_message_texte" ><?php echo(get_option('buffetpage_message_texte')); ?></textarea>
+        <input type="text" id="buffetpage_msg_titre" name="buffetpage_msg_titre" value="<?php echo(get_option('buffetpage_msg_titre')); ?>" />
     </div>
     <?php
-} // END => field_buffetpage_message_texte
+} // END => field_buffetpage_msg_titre
+
+// CALLBARCK FIELD : field_buffetpage_msg_element -----------------------------
+function field_buffetpage_msg_element(){
+
+    $buffetpage_msg_element_entrefroide = esc_attr(get_option('buffetpage_msg_element_entrefroide'));
+    $buffetpage_msg_element_potage = esc_attr(get_option('buffetpage_msg_element_potage'));
+    $buffetpage_msg_element_entrechaude = esc_attr(get_option('buffetpage_msg_element_entrechaude'));
+    $buffetpage_msg_element_plats = esc_attr(get_option('buffetpage_msg_element_plats'));
+
+    ?>
+        <p class="backend-element-buffet">
+            <input type="text" id="buffetpage_msg_element_entrefroide" name="buffetpage_msg_element_entrefroide" value="<?php echo(get_option('buffetpage_msg_element_entrefroide')); ?>" />
+            <span> entrées froides</span>
+        </p>
+        <p class="backend-element-buffet" >
+            <input type="text" id="buffetpage_msg_element_potage" name="buffetpage_msg_element_potage" value="<?php echo(get_option('buffetpage_msg_element_potage')); ?>"/>
+            <span> potages</span>
+        </p>
+        <p class="backend-element-buffet">
+            <input type="text" id="buffetpage_msg_element_entrechaude" name="buffetpage_msg_element_entrechaude" value="<?php echo(get_option('buffetpage_msg_element_entrechaude')); ?>" />
+            <span> entrées chaudes</span>
+        </p>
+        <p class="backend-element-buffet">
+            <input type="text" id="buffetpage_msg_element_plats" name="buffetpage_msg_element_plats" value="<?php echo(get_option('buffetpage_msg_element_plats')); ?>" />
+            <span> sortes de plats (viandes, volailles, légumes, etc...)</span>
+        </p>
+
+    <?php
+} // END => field_buffetpage_msg_element
+
+function field_buffetpage_msn_button(){
+    $buffetpage_msn_button = esc_attr(get_option('buffetpage_msn_button'));
+    ?>
+        <input type="checkbox" id="buffetpage_msn_button" name="buffetpage_msn_button" value="1" <?php checked(1, get_option('buffetpage_msn_button'), true); ?> />
+        <span>Lien la section <strong>tarif-buffet</strong></span>
+    <?php
+}
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 3 : section_description_buffet --> Option 2 -- page-buffet
+/* ----------------------------------------------------------------------------- */
+function display_section_buffetpage_desc(){}
+
+
+// CALLBACK FIELDS : buffetpage_desc_hidden ----------------------------------
+function field_buffetpage_desc_hidden(){
+    $buffetpage_desc_hidden = esc_attr(get_option('buffetpage_desc_hidden'));
+    ?>
+        <div class="">
+            <input type="checkbox" id="buffetpage_desc_hidden" name="buffetpage_desc_hidden" value="1" <?php checked(1, get_option('buffetpage_desc_hidden'), true); ?> />
+            <span class="info">Masquer cette section sur la page d'acceuil</span>
+        </div>
+    <?php
+} // END => field_buffetpage_desc_hidden
+
+// CALLBACK FLIELDS : field_buffetpage_desc_txt_content ------------------------
+function field_buffetpage_desc_txt_content(){
+    $buffetpage_desc_txt_content = esc_attr(get_option('buffetpage_desc_txt_content'));
+    ?>
+    <div class="">
+        <textarea id="buffetpage_desc_txt_content" name="buffetpage_desc_txt_content" ><?php echo(get_option('buffetpage_desc_txt_content')); ?></textarea>
+    </div>
+
+    <?php
+} // END => field_buffetpage_desc_txt_content

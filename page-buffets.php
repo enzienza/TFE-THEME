@@ -40,7 +40,7 @@
  ?>
 
 
-<!-- START : section-buffetpage_cover -->
+<!-- START : section-buffetpage_message -->
 <?php
      // SI buffetpage_cover_hidden EST COCHE
      // => Alors il n'y a pas de section
@@ -52,29 +52,94 @@
          // SINON
          // => Afficher la section
          ?>
-         <section id="home-section-buffet" class="bg-section">
+         <section id="home-section-buffet" class="container">
+             <div class="row">
+                 <?php
+                     // SI buffetpage_msg_affiche_avatar EST COCHE
+                     // => Alors on affiche l'avatar
 
-             <?php
-                 // SI buffetpage_cover_affiche_img EST COCHE
-                 // => Alors on affiche l'image en background
+                     if(checked(1, get_option('buffetpage_msg_affiche_avatar'), false)){
+                         ?>
+                             <div class="col-md-6 col-12">
+                                 <img src="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" alt="" class="msg-avatar" />
+                             </div><!-- .col-md-6 .col-12 -->
+                         <?php
+                     }
+                  ?>
+                 <div class="col-md-6 col-12">
+                     <h2><?php echo get_option('buffetpage_message_titre'); ?></h2>
+                     <ul>
+                         <li>
+                             <?php echo(get_option('buffetpage_msg_element_entrefroide')); ?>
+                             <span class="info-element-buffet">entrées froides</span>
+                         </li>
+                         <li>
+                             <?php echo(get_option('buffetpage_msg_element_potage')); ?>
+                             <span class="info-element-buffet">potages</span>
+                         </li>
+                         <li>
+                             <?php echo(get_option('buffetpage_msg_element_entrechaude')); ?>
+                             <span class="info-element-buffet">entrées chaude</span>
+                         </li>
+                         <li>
+                             <?php echo(get_option('buffetpage_msg_element_plats')); ?>
+                             <span>
+                                 sortes de plats <br/>
+                                 (viandes, volailles, légumes, etc...)
+                             </span class="info-element-buffet">
+                         </li>
+                     </ul>
 
-                 if(checked(1, get_option('buffetpage_message_avatar'), false)){
-                     ?>
-                         <div class="img-cover">
-                             <img src="<?php echo get_option('buffetpage_cover_bg_img'); ?>" alt="">
-                         </div><!-- .img-buffet -->
                      <?php
-                 }
-              ?>
-             <div class="container">
-                 <p><?php echo get_option('buffetpage_message_texte'); ?></p>
-             </div><!-- / .container -->
+                         // SI buffetpage_msn_button_img EST COCHE
+                         // => Alors renvois à la section-tarif-buffet
+
+                         if(checked(1, get_option('buffetpage_msn_button'), false)){
+                             ?>
+                             <div class="btn">
+                                 <a href="#section-tarif-buffet">
+                                     Tarif buffet
+                                 </a>
+                             </div>
+                             <?php
+                         }
+                      ?>
+
+                 </div><!-- / .col-md-6 col-12 -->
+             </div><!-- / .row -->
          </section><!-- / #home-section-buffet .bg-buffet-->
          <?php
      }
   ?>
 
-<section id="">
+<!-- START : section-description-buffet -->
+<section id="section-description-buffet" class="container">
+    <h2>Description Buffet</h2>
+    <div class="row">
+        <div class="col-md-6 col-12 box-left">
+            <p></p>
+        </div>
+        <div class="col-md-6 col-12 box-right">
+            <div class="row">
+                <div class="col-12 img-buffet">
+                    <img src="" alt="">
+                </div>
+                <div class="col-12 img-buffet">
+                    <img src="" alt="">
+                </div>
+                <div class="col-12 img-buffet">
+                    <img src="" alt="">
+                </div>
+                <div class="col-12 img-buffet">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- START : section-tarif-buffet -->
+<section id="section-tarif-buffet">
 
     <div class="container" style=" margin: 2rem auto;">
 
