@@ -80,9 +80,34 @@ function field_homepage_cover_bg_video(){
     <?php
 } // END => field_homepage_cover_bg_video
 
+// CALLBACK REGISTER : homepage_btn_img_buffet ---------------------------------
+function handle_file_buffetimg_homepage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['homepage_btn_img_buffet']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['homepage_btn_img_buffet'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['homepage_btn_img_buffet']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('homepage_btn_img_buffet');
+
+} // END => handle_file_buffetimg_homepage
 
 
+// CALLBACK REGISTER : homepage_btn_img_carte ---------------------------------
+function handle_file_carteimg_homepage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['homepage_btn_img_carte']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['homepage_btn_img_carte'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['homepage_btn_img_carte']['tmp_name']))
 
+    //no upload. old file url is the new value.
+    return get_option('homepage_btn_img_carte');
+
+} // END => handle_file_carteimg_homepage
 
 
 // CALLBACK FIELD : homepage_btn
@@ -120,13 +145,13 @@ function field_homepage_btn(){
 
         <!-- START : btn-img -->
         <div class="backend-card-img-bg">
-            <img src="<?php echo get_option('buffetpage_desc_img_uno'); ?>" alt="" class="backend-img-accueil">
+            <img src="<?php echo get_option('homepage_btn_img_buffet'); ?>" alt="" class="backend-img-accueil">
         </div>
 
         <div class="backend-patg-img-accueil">
-            <input type="file" name='buffetpage_desc_img_uno' id='buffetpage_desc_img_uno' value="<?php echo get_option('buffetpage_desc_img_uno'); ?>" />
+            <input type="file" name='homepage_btn_img_buffet' id='homepage_btn_img_buffet' value="<?php echo get_option('homepage_btn_img_buffet'); ?>" />
             <p>
-                <input type="text" name="" value="<?php echo get_option('buffetpage_desc_img_uno'); ?>" />
+                <input type="text" name="" value="<?php echo get_option('homepage_btn_img_buffet'); ?>" />
             </p>
         </div>
     </div><!-- / .backend-item-btn-img -->
@@ -152,13 +177,13 @@ function field_homepage_btn(){
 
         <!-- START : bnt-img -->
         <div class="backend-card-img-bg">
-            <img src="<?php echo get_option('buffetpage_desc_img_due'); ?>" alt="" class="backend-img-accueil">
+            <img src="<?php echo get_option('homepage_btn_img_carte'); ?>" alt="" class="backend-img-accueil">
         </div>
 
         <div class="backend-patg-img-accueil">
-            <input type="file" name='buffetpage_desc_img_due' id='buffetpage_desc_img_due' value="<?php echo get_option('buffetpage_desc_img_due'); ?>" />
+            <input type="file" name='homepage_btn_img_carte' id='homepage_btn_img_carte' value="<?php echo get_option('homepage_btn_img_carte'); ?>" />
             <p>
-                <input type="text" name="" value="<?php echo get_option('buffetpage_desc_img_due'); ?>" />
+                <input type="text" name="" value="<?php echo get_option('homepage_btn_img_carte'); ?>" />
             </p>
         </div>
     </div><!-- / .backend-item-btn-img -->

@@ -82,3 +82,20 @@ register_setting(
     'homepage_cover_bg_img', // field ID
     'handle_file_bg_cover_homepage' // Callback function
 ); // end -> register : handle_file_bg_cover_homepage
+
+
+
+// REGISTER : homepage_btn_img_buffet
+register_setting(
+    'group-page-accueil',                    // group (element display in the form)
+    'homepage_btn_img_buffet',              // field ID
+    'handle_file_buffetimg_homepage'      // Callback function
+); // end -> register : homepage_btn_img_buffet
+
+
+// REGISTER : homepage_btn_img_carte
+register_setting(
+    'group-page-accueil',                    // group (element display in the form)
+    'homepage_btn_img_carte',              // field ID
+    'handle_file_carteimg_homepage'      // Callback function
+); // end -> register : homepage_btn_img_carte
