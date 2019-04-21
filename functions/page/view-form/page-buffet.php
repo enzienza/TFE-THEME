@@ -135,7 +135,9 @@ function field_buffetpage_msg_img_avatar(){
 
     $buffetpage_msg_affiche_avatar = esc_attr(get_option('buffetpage_msg_affiche_avatar'));
     ?>
-
+    <div class="backend-card-img">
+        <img src="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" alt="" class="backend-img-bg">
+    </div>
     <div class="">
         <span>
             <input type="checkbox" id="buffetpage_msg_affiche_avatar" name="buffetpage_msg_affiche_avatar" value="1" <?php checked(1, get_option('buffetpage_msg_affiche_avatar'), true); ?> />
@@ -145,9 +147,6 @@ function field_buffetpage_msg_img_avatar(){
         <p>
             <input type="text" name="" value="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" />
         </p>
-        <div class="backend-card-img-bg">
-            <img src="<?php echo get_option('buffetpage_msg_img_avatar'); ?>" alt="" class="backend-img-bg">
-        </div>
     </div>
     <?php
 } // END => field_buffetpage_msg_img_avatar
@@ -345,3 +344,72 @@ function field_buffetpage_desc_img(){
 
     <?php
 } // END => field_buffetpage_desc_img
+
+
+
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 4 : section_tarif --> Option 2 -- page-buffet
+/* ----------------------------------------------------------------------------- */
+function display_section_buffetpage_tarif(){}
+
+// CALLBACK FILTER : buffetpage_tarif_txt --------------------------------------
+function field_buffetpage_tarif_txt(){
+    $buffetpage_tarif_txt = esc_attr(get_option('buffetpage_tarif_txt'));
+    ?>
+        <div class="">
+            <textarea id="buffetpage_tarif_txt" name="buffetpage_tarif_txt" ><?php echo(get_option('buffetpage_tarif_txt')); ?></textarea>
+        </div>
+    <?php
+} // END => field_buffetpage_tarif_txt
+
+// CALLBACK FILTER : buffetpage_tarif_catch ------------------------------------
+function field_buffetpage_tarif_catch(){
+    // $buffetpage_tarif_catch = esc_attr(get_option('buffetpage_tarif_catch'));
+    ?>
+        <div class="">
+            <input type="text" id="buffetpage_tarif_catch" name="buffetpage_tarif_catch" value="<?php echo(get_option('buffetpage_tarif_catch')); ?>">
+        </div>
+    <?php
+} // END => field_buffetpage_tarif_catch
+
+// CALLBACK REGISTER : avatar_tarif
+function handle_avatartarif_file($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['avatar_tarif']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['avatar_tarif'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['avatar_tarif']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('avatar_tarif');
+
+} // END => handle_avatartarif_file
+
+// CALLBACK FILTER : avatar_tarif
+function field_buffetpage_tarif_avatar(){
+    $buffetpage_tarif_affiche_avatar = esc_attr(get_option('buffetpage_tarif_affiche_avatar'));
+    ?>
+
+    <div class="backend-card-img">
+        <img src="<?php echo get_option('avatar_tarif'); ?>" alt="" class="backend-img-logo">
+    </div>
+
+    <div class="">
+        <span>
+            <input type="checkbox" id="buffetpage_tarif_affiche_avatar" name="buffetpage_tarif_affiche_avatar" value="1" <?php checked(1, get_option('buffetpage_tarif_affiche_avatar'), true); ?> />
+            <span class="info">Ajouter l'avatar pour cette section</span>
+        </span>
+
+        <div class="">
+            <input type="file" name='avatar_tarif' id='avatar_tarif' value="<?php echo get_option('avatar_tarif'); ?>" />
+            <p>
+                <input type="text" name="" value="<?php echo get_option('avatar_tarif'); ?>" />
+            </p>
+
+        </div>
+    </div>
+
+    <?php
+} // END => field_buffetpage_tarif_avatar

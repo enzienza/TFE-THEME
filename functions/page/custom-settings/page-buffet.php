@@ -43,11 +43,11 @@ add_settings_field(
 
 // FIELDS : buffetpage_cover_bg_img ----------------------------------------------
 add_settings_field(
-    'buffetpage_cover_bg_img', // ID
-    __('Image d\'arrière plan', 'section_buffetpage_cover'), // LABEL
-    'field_buffetpage_cover_bg_img', // CALLBACK FUNCTION
-    'page-buffet', // MENU PAGE SLUG
-    'section_buffetpage_cover' // SECTION ID
+    'buffetpage_cover_bg_img',                                  // ID
+    __('Image d\'arrière plan', 'section_buffetpage_cover'),    // LABEL
+    'field_buffetpage_cover_bg_img',                            // CALLBACK FUNCTION
+    'page-buffet',                                              // MENU PAGE SLUG
+    'section_buffetpage_cover'                                  // SECTION ID
 ); // end -> field : buffetpage_cover_bg_img
 
 
@@ -108,7 +108,7 @@ add_settings_field(
 // FIELDS : buffetpage_msg_img_avatar ----------------------------------------------
 add_settings_field(
     'buffetpage_msg_img_avatar',                                // ID
-    __('Avatar', 'section_buffetpage_message'),  // LABEL
+    __('Avatar', 'section_buffetpage_message'),                 // LABEL
     'field_buffetpage_msg_img_avatar',                          // CALLBACK FUNCTION
     'page-buffet',                                              // MENU PAGE SLUG
     'section_buffetpage_message'                                // SECTION ID
@@ -155,8 +155,8 @@ register_setting('group-page-buffet', 'buffetpage_msn_button');
 // REGISTER : buffetpage_msg_img_avatar
 register_setting(
     'group-page-buffet',                             // group (element display in the form)
-    'buffetpage_msg_img_avatar',                    // field ID
-    'handle_file_avatar_msg_buffetpage'             // Callback function
+    'buffetpage_msg_img_avatar',                     // field ID
+    'handle_file_avatar_msg_buffetpage'              // Callback function
 ); // end -> register : handle_file_avatar_msg_buffetpage
 
 
@@ -168,7 +168,7 @@ add_settings_section(
     'section_buffetpage_desc',                                           // ID
     __('Section 3 - Description Buffet', 'section_buffetpage_desc'),     // TITLE
     'display_section_buffetpage_desc',                                   // CALLBACK
-    'page-buffet'                                                           // PAGE
+    'page-buffet'                                                        // PAGE
 ); // end --> section : section_buffetpage_desc
 
 // FIELDS : buffetpage_desc_hidden ----------------------------------------------
@@ -182,20 +182,20 @@ add_settings_field(
 
 // FIELDS : buffetpage_desc_txt_content ----------------------------------------------
 add_settings_field(
-    'buffetpage_desc_txt_content',                                 // ID
-    __('Texte description', 'section_buffetpage_desc'),      // LABEL
-    'field_buffetpage_desc_txt_content',                           // CALLBACK FUNCTION
-    'page-buffet',                                            // MENU PAGE SLUG
-    'section_buffetpage_desc'                                // SECTION ID
+    'buffetpage_desc_txt_content',                              // ID
+    __('Texte description', 'section_buffetpage_desc'),         // LABEL
+    'field_buffetpage_desc_txt_content',                        // CALLBACK FUNCTION
+    'page-buffet',                                              // MENU PAGE SLUG
+    'section_buffetpage_desc'                                   // SECTION ID
 ); // end --> field : buffetpage_desc_txt_content
 
 // FIELDS : buffetpage_desc_img ----------------------------------------------
 add_settings_field(
     'buffetpage_desc_img',                              // ID
-    __('Image buffet', 'section_buffetpage_desc'), // LABEL
+    __('Image buffet', 'section_buffetpage_desc'),      // LABEL
     'field_buffetpage_desc_img',                        // CALLBACK FUNCTION
-    'page-buffet',                                          // MENU PAGE SLUG
-    'section_buffetpage_desc'                               // SECTION ID
+    'page-buffet',                                      // MENU PAGE SLUG
+    'section_buffetpage_desc'                           // SECTION ID
 ); // end -> field : buffetpage_desc_img
 
 
@@ -207,29 +207,81 @@ register_setting('group-page-buffet', 'buffetpage_desc_txt_content');
 
 // REGISTER : buffetpage_desc_img_uno
 register_setting(
-    'group-page-buffet',                    // group (element display in the form)
-    'buffetpage_desc_img_uno',              // field ID
-    'handle_file_unoimg_buffetpage'      // Callback function
+    'group-page-buffet',                        // group (element display in the form)
+    'buffetpage_desc_img_uno',                  // field ID
+    'handle_file_unoimg_buffetpage'             // Callback function
 ); // end -> register : buffetpage_desc_img_uno
 
 // REGISTER : buffetpage_desc_img_due
 register_setting(
-    'group-page-buffet',                    // group (element display in the form)
-    'buffetpage_desc_img_due',              // field ID
-    'handle_file_dueimg_buffetpage'      // Callback function
+    'group-page-buffet',                        // group (element display in the form)
+    'buffetpage_desc_img_due',                  // field ID
+    'handle_file_dueimg_buffetpage'             // Callback function
 ); // end -> register : buffetpage_desc_img_due
 
 
 // REGISTER : buffetpage_desc_img_tre
 register_setting(
-    'group-page-buffet',                    // group (element display in the form)
-    'buffetpage_desc_img_tre',              // field ID
-    'handle_file_treimg_buffetpage'      // Callback function
+    'group-page-buffet',                        // group (element display in the form)
+    'buffetpage_desc_img_tre',                  // field ID
+    'handle_file_treimg_buffetpage'             // Callback function
 ); // end -> register : buffetpage_desc_img_tre
 
 // REGISTER : buffetpage_desc_img_quattro
 register_setting(
-    'group-page-buffet',                    // group (element display in the form)
+    'group-page-buffet',                        // group (element display in the form)
     'buffetpage_desc_img_quattro',              // field ID
-    'handle_file_quattroimg_buffetpage'      // Callback function
+    'handle_file_quattroimg_buffetpage'         // Callback function
 ); // end -> register : buffetpage_desc_img_quattro
+
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 4 : section_tarif --> Option 2 -- page-buffet
+/* ----------------------------------------------------------------------------- */
+// SETTINGS
+add_settings_section(
+    'section_buffetpage_tarif',                               // ID
+    __('Section 4 - Tarif', 'section_buffetpage_tarif'),      // TITLE
+    'display_section_buffetpage_tarif',                       // CALLBACK
+    'page-buffet'                                             // PAGE
+); // end --> section : section_buffetpage_cover
+
+// FIELDS : buffetpage_tarif_txt ----------------------------------------------
+add_settings_field(
+    'buffetpage_tarif_txt',                                     // ID
+    __('Mini description', 'section_buffetpage_tarif'),         // LABEL
+    'field_buffetpage_tarif_txt',                               // CALLBACK FUNCTION
+    'page-buffet',                                              // MENU PAGE SLUG
+    'section_buffetpage_tarif'                                  // SECTION ID
+); // end --> field : buffetpage_tarif_txt
+
+// FIELDS : buffetpage_tarif_catch ----------------------------------------------
+add_settings_field(
+    'buffetpage_tarif_catch',                                     // ID
+    __('Phrase d\'accroche', 'section_buffetpage_tarif'),         // LABEL
+    'field_buffetpage_tarif_catch',                               // CALLBACK FUNCTION
+    'page-buffet',                                              // MENU PAGE SLUG
+    'section_buffetpage_tarif'                                  // SECTION ID
+); // end --> field : buffetpage_tarif_catch
+
+// FIELDS : buffetpage_tarif_avatar ----------------------------------------------
+add_settings_field(
+    'buffetpage_tarif_avatar',                                  // ID
+    __('Avatar', 'section_buffetpage_tarif'),                   // LABEL
+    'field_buffetpage_tarif_avatar',                            // CALLBACK FUNCTION
+    'page-buffet',                                              // MENU PAGE SLUG
+    'section_buffetpage_tarif'                                  // SECTION ID
+); // end --> field : buffetpage_tarif_catch
+
+//REGISTER : section_tarif
+register_setting('group-page-buffet', 'buffetpage_tarif_txt');
+register_setting('group-page-buffet', 'buffetpage_tarif_catch');
+register_setting('group-page-buffet', 'buffetpage_tarif_affiche_avatar');
+
+
+// REGISTER : avatar_tarif
+register_setting(
+    'group-page-buffet',    // group (element display in the form)
+    'avatar_tarif', // field ID
+    'handle_avatartarif_file' // Callback function
+); // end -> register : handle_avatartarif_file

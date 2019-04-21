@@ -1,0 +1,11 @@
+// main: ../style.scss
+
+.card-tarif{
+    height: 300px;
+}
+
+
+.card-collapse{
+    @include flex-center;
+    margin-bottom: 2rem;
+}

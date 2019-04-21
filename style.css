@@ -6375,6 +6375,18 @@ ul {
   width: 50%;
 }
 
+.btn-tarif .row {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.btn-tarif .btn {
+  width: 100%;
+  background-color: inherit;
+  border: 2px solid #FFC033;
+  text-transform: uppercase;
+}
+
 @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
   .btn-center .btn {
     width: 100%;
@@ -6431,6 +6443,23 @@ ul {
   width: auto;
   height: auto;
   z-index: -100;
+}
+
+.card-tarif {
+  height: 300px;
+}
+
+.card-collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 /* -------------------------------------------- */
@@ -6659,30 +6688,70 @@ footer {
   width: 50%;
 }
 
-/* --- box-left --- */
-.box-left {
+#section-description-buffet {
+  /* --- box-left --- */
+  /* end -> .box-left */
+  /* --- box-right --- */
+  /* end -> .box-right */
+}
+
+#section-description-buffet .box-left {
   padding: 0 4%;
 }
 
-.box-left .description-buffet {
+#section-description-buffet .box-left .description-buffet {
   text-align: justify;
 }
 
-/* --- box-right --- */
-.box-right {
+#section-description-buffet .box-right {
   padding: 0 4% 2% 0;
 }
 
-.box-right .img-buffet:nth-child(even) {
+#section-description-buffet .box-right .img-buffet:nth-child(even) {
   margin-top: 30px;
 }
 
-.box-right .img-buffet img {
+#section-description-buffet .box-right .img-buffet img {
   border-radius: 15px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   height: 180px;
+}
+
+/* END ==> #section-description-buffet */
+#section-tarif-buffet .box-right {
+  margin-bottom: 3rem;
+}
+
+#section-tarif-buffet .box-right img {
+  width: 50%;
+}
+
+#section-tarif-buffet .item-card {
+  margin-bottom: 3rem;
+}
+
+/* END ==> section-tarif-buffet */
+.box-collapse {
+  height: 250px;
+}
+
+.box-collapse-left {
+  padding: 1rem;
+  border: 2px solid #dfdfdf;
+  background-color: #dfdfdf;
+  height: 100%;
+}
+
+.box-collapse-right {
+  border: 2px solid #dfdfdf;
+  padding: 1rem;
+  height: 100%;
+}
+
+.box-collapse-right .table-tarif {
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
