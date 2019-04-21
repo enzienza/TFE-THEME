@@ -72,7 +72,6 @@ add_settings_field(
 // REGISTER : section_homepage_cover -------------------------------------------
 register_setting('group-page-accueil', 'homepage_affiche_img');
 register_setting('group-page-accueil', 'homepage_affiche_video');
-register_setting('group-page-accueil', 'homepage_url_video');
 register_setting('group-page-accueil', 'affiche_logo');
 
 

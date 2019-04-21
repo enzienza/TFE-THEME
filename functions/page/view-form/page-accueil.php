@@ -89,20 +89,16 @@ function field_homepage_bg_video(){
                 <span class="info">Ajouter une image d'arrière-plan pour cette section</span>
             </p>
 
-            <p>
-                <span>URL YouTube</span>
-                <input type="text" id="homepage_url_video" name="homepage_url_video" value="<?php echo get_option('homepage_url_video'); ?>" />
-            </p>
-
         </div>
 
 
         <div class="">
             <input type="file" id="homepage_file_video" name="homepage_file_video" value="<?php echo get_option('homepage_file_video'); ?>" />
-            <?php echo get_option('homepage_file_video'); ?>
+
+            <p>
+                <input type="text" name="" value="<?php echo get_option('homepage_file_video'); ?>" />
+            </p>
         </div>
-
-
 
     <?php
 } // END => field_homepage_bg_video
