@@ -24,61 +24,104 @@ Version: 1.0
 // CALLBACK SETTINGS -----------------------------------------------------------
 function display_section_homepage_cover(){}
 
-// CALLBACK REGISTER : homepage_cover_bg_img -----------------------------------
+// CALLBACK REGISTER : homepage_bg_img -----------------------------------
 function handle_file_bg_cover_homepage($options){
     //check if user had uploaded a file and clicked save changes button
-    if(!empty($_FILES['homepage_cover_bg_img']['tmp_name'])){
-        $urls = wp_handle_upload($_FILES['homepage_cover_bg_img'], array('test_form' => FALSE));
+    if(!empty($_FILES['homepage_bg_img']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['homepage_bg_img'], array('test_form' => FALSE));
         $temp = $urls['url'];
         return $temp;
-    } // end -> if(!empty($_FILES['homepage_cover_bg_img']['tmp_name']))
+    } // end -> if(!empty($_FILES['homepage_bg_img']['tmp_name']))
 
     //no upload. old file url is the new value.
-    return get_option('homepage_cover_bg_img');
+    return get_option('homepage_bg_img');
 
 } // END => handle_file_bg_cover_homepage
 
 
-// CALLBACK FIELDS : homepage_cover_bg_img -------------------------------------
-function field_homepage_cover_bg_img(){
+// CALLBACK FIELDS : homepage_bg_img -------------------------------------
+function field_homepage_bg_img(){
     //echo form element for file upload
 
-    $homepage_cover_affiche_img = esc_attr(get_option('homepage_cover_affiche_img'));
+    $homepage_affiche_img = esc_attr(get_option('homepage_affiche_img'));
     ?>
 
     <div class="">
         <span>
-            <input type="checkbox" id="homepage_cover_affiche_img" name="homepage_cover_affiche_img" value="1" <?php checked(1, get_option('homepage_cover_affiche_img'), true); ?> />
+            <input type="checkbox" id="homepage_affiche_img" name="homepage_affiche_img" value="1" <?php checked(1, get_option('homepage_affiche_img'), true); ?> />
             <span class="info">Ajouter une image d'arrière-plan pour cette section</span>
         </span>
-        <input type="file" name='homepage_cover_bg_img' id='homepage_cover_bg_img' value="<?php echo get_option('homepage_cover_bg_img'); ?>" />
+        <input type="file" name='homepage_bg_img' id='homepage_bg_img' value="<?php echo get_option('homepage_bg_img'); ?>" />
         <p>
-            <input type="text" name="" value="<?php echo get_option('homepage_cover_bg_img'); ?>" />
+            <input type="text" name="" value="<?php echo get_option('homepage_bg_img'); ?>" />
         </p>
         <div class="backend-card-img-bg">
-            <img src="<?php echo get_option('homepage_cover_bg_img'); ?>" alt="" class="backend-img-bg">
+            <img src="<?php echo get_option('homepage_bg_img'); ?>" alt="" class="backend-img-bg">
         </div>
     </div>
     <?php
-} // END => field_homepage_cover_bg_img
+} // END => field_homepage_bg_img
 
-// CALLBACK FIELD : homepage_cover_bg_video ------------------------------------
-function field_homepage_cover_bg_video(){
+// CALLBACK REGISTER : homepage_file_video ---------------------------------
+function handle_file_filevideo_homepage($options){
+    //check if user had uploaded a file and clicked save changes button
+    if(!empty($_FILES['homepage_file_video']['tmp_name'])){
+        $urls = wp_handle_upload($_FILES['homepage_file_video'], array('test_form' => FALSE));
+        $temp = $urls['url'];
+        return $temp;
+    } // end -> if(!empty($_FILES['homepage_file_video']['tmp_name']))
+
+    //no upload. old file url is the new value.
+    return get_option('homepage_file_video');
+
+} // END => handle_file_filevideo_homepage
+
+
+
+// CALLBACK FIELD : homepage_bg_video ------------------------------------
+function field_homepage_bg_video(){
+    $homepage_affiche_video = esc_attr(get_option('homepage_affiche_video'));
+    $homepage_url_video = esc_attr(get_option('homepage_url_video'))
     ?>
         <div class="">
             <p>
-                <input type="checkbox" id="" name="" value="1" <?php //checked(1, get_option(''), true); ?> />
+                <input type="checkbox" id="homepage_affiche_video" name="homepage_affiche_video" value="1" <?php checked(1, get_option('homepage_affiche_video'), true); ?> />
                 <span class="info">Ajouter une image d'arrière-plan pour cette section</span>
             </p>
 
             <p>
                 <span>URL YouTube</span>
-                <input type="text" id="" name="" value="<?php //'); ?>" />
+                <input type="text" id="homepage_url_video" name="homepage_url_video" value="<?php echo get_option('homepage_url_video'); ?>" />
             </p>
 
         </div>
+
+
+        <div class="">
+            <input type="file" id="homepage_file_video" name="homepage_file_video" value="<?php echo get_option('homepage_file_video'); ?>" />
+            <?php echo get_option('homepage_file_video'); ?>
+        </div>
+
+
+
     <?php
-} // END => field_homepage_cover_bg_video
+} // END => field_homepage_bg_video
+
+// CALLBACK FIELD :
+function field_homepage_logo(){
+    $affiche_logo = esc_attr(get_option('affiche_logo'));
+    ?>
+    <span>
+        <input type="checkbox" id="affiche_logo" name="affiche_logo" value="1" <?php checked(1, get_option('affiche_logo'), true); ?> />
+        <span class="info">Ajouter le logo sur la page</span>
+    </span>
+    <div class="">
+        <img src="<?php echo get_option('logo_resto'); ?>" alt="" class="backend-img-logo">
+    </div>
+    <?php
+} // END => field_homepage_logo
+
+
 
 // CALLBACK REGISTER : homepage_btn_img_buffet ---------------------------------
 function handle_file_buffetimg_homepage($options){

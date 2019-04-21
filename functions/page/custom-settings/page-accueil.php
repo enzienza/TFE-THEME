@@ -32,40 +32,49 @@ add_settings_section(
 ); // end --> section : section_homepage_cover
 
 
-// FIELDS : homepage_cover_bg_img ----------------------------------------------
+// FIELDS : homepage_bg_img ----------------------------------------------
 add_settings_field(
-    'homepage_cover_bg_img', // ID
+    'homepage_bg_img', // ID
     __('Image d\'arrière plan', 'section_homepage_cover'), // LABEL
-    'field_homepage_cover_bg_img', // CALLBACK FUNCTION
+    'field_homepage_bg_img', // CALLBACK FUNCTION
     'page-accueil', // MENU PAGE SLUG
     'section_homepage_cover' // SECTION ID
-); // end -> field : homepage_cover_bg_img
+); // end -> field : homepage_bg_img
 
 
-// // FIELDS : homepage_cover_bg_video -----------------------------------------
+// FIELDS : homepage_bg_video -----------------------------------------
 add_settings_field(
-    'homepage_cover_bg_video',                                // ID
+    'homepage_bg_video',                                // ID
     __('Video d\'arrière plan', 'section_homepage_cover'),    // LABEL
-    'field_homepage_cover_bg_video',                          // CALLBACK FUNCTION
+    'field_homepage_bg_video',                          // CALLBACK FUNCTION
     'page-accueil',                                           // MENU PAGE SLUG
     'section_homepage_cover'                                  // SECTION ID
-); // end --> field : homepage_cover_bg_video
+); // end --> field : homepage_bg_video
 
+// FIELDS : affiche_logo -------------------------------------------------------
+add_settings_field(
+    'affiche_logo',                                // ID
+    __('Afficher le logo', 'section_homepage_cover'),    // LABEL
+    'field_homepage_logo',                          // CALLBACK FUNCTION
+    'page-accueil',                                           // MENU PAGE SLUG
+    'section_homepage_cover'                                  // SECTION ID
+); // end -->
 
+// FIELDS : homepage_btn -------------------------------------------------------
 add_settings_field(
     'homepage_btn',                                // ID
     __('Afficher le(s) bouton(s)', 'section_homepage_cover'),         // LABEL
     'field_homepage_btn',                          // CALLBACK FUNCTION
     'page-accueil',                                         // MENU PAGE SLUG
     'section_homepage_cover'                                // SECTION ID
-); // end --> field : homepage_cover_button
+); // end --> field : homepage_btn
 
 // REGISTER : section_homepage_cover -------------------------------------------
-register_setting('group-page-accueil', 'homepage_cover_hidden');
-register_setting('group-page-accueil', 'homepage_cover_affiche_img');
-register_setting('group-page-accueil', 'homepage_cover_btn_actif');
-register_setting('group-page-accueil', 'homepage_cover_btn_txt');
-register_setting('group-page-accueil', 'homepage_cover_btn_url');
+register_setting('group-page-accueil', 'homepage_affiche_img');
+register_setting('group-page-accueil', 'homepage_affiche_video');
+register_setting('group-page-accueil', 'homepage_url_video');
+register_setting('group-page-accueil', 'affiche_logo');
+
 
 register_setting('group-page-accueil', 'btn_buffet_hidden');
 register_setting('group-page-accueil', 'btn_buffet_txt');
@@ -76,13 +85,19 @@ register_setting('group-page-accueil', 'btn_carte_txt');
 register_setting('group-page-accueil', 'bnt_carte_url');
 
 
-// REGISTER : homepage_cover_bg_img
+// REGISTER : homepage_bg_img
 register_setting(
     'group-page-accueil',    // group (element display in the form)
-    'homepage_cover_bg_img', // field ID
+    'homepage_bg_img', // field ID
     'handle_file_bg_cover_homepage' // Callback function
 ); // end -> register : handle_file_bg_cover_homepage
 
+// REGISTER : homepage_file_video
+register_setting(
+    'group-page-accueil',                    // group (element display in the form)
+    'homepage_file_video',              // field ID
+    'handle_file_filevideo_homepage'      // Callback function
+); // end -> register : homepage_file_video
 
 
 // REGISTER : homepage_btn_img_buffet
