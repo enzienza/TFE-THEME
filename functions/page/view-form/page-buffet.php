@@ -48,7 +48,7 @@ function field_buffetpage_cover_hidden(){
     ?>
         <div class="">
             <input type="checkbox" id="buffetpage_cover_hidden" name="buffetpage_cover_hidden" value="1" <?php checked(1, get_option('buffetpage_cover_hidden'), true); ?> />
-            <span class="info">Masquer cette section sur la page d'acceuil</span>
+            <span class="info">Masquer cette section sur la page buffet</span>
         </div>
     <?php
 } // END => field_buffetpage_cover_hidden
@@ -209,7 +209,7 @@ function field_buffetpage_desc_hidden(){
     ?>
         <div class="">
             <input type="checkbox" id="buffetpage_desc_hidden" name="buffetpage_desc_hidden" value="1" <?php checked(1, get_option('buffetpage_desc_hidden'), true); ?> />
-            <span class="info">Masquer cette section sur la page d'acceuil</span>
+            <span class="info">Masquer cette section sur la page buffet</span>
         </div>
     <?php
 } // END => field_buffetpage_desc_hidden
@@ -346,8 +346,6 @@ function field_buffetpage_desc_img(){
 } // END => field_buffetpage_desc_img
 
 
-
-
 /* ----------------------------------------------------------------------------- */
 // SECTION 4 : section_tarif --> Option 2 -- page-buffet
 /* ----------------------------------------------------------------------------- */
@@ -373,7 +371,7 @@ function field_buffetpage_tarif_catch(){
     <?php
 } // END => field_buffetpage_tarif_catch
 
-// CALLBACK REGISTER : avatar_tarif
+// CALLBACK REGISTER : avatar_tarif --------------------------------------------
 function handle_avatartarif_file($options){
     //check if user had uploaded a file and clicked save changes button
     if(!empty($_FILES['avatar_tarif']['tmp_name'])){
@@ -387,7 +385,7 @@ function handle_avatartarif_file($options){
 
 } // END => handle_avatartarif_file
 
-// CALLBACK FILTER : avatar_tarif
+// CALLBACK FILTER : avatar_tarif ----------------------------------------------
 function field_buffetpage_tarif_avatar(){
     $buffetpage_tarif_affiche_avatar = esc_attr(get_option('buffetpage_tarif_affiche_avatar'));
     ?>
@@ -413,3 +411,20 @@ function field_buffetpage_tarif_avatar(){
 
     <?php
 } // END => field_buffetpage_tarif_avatar
+
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 5 : section-reservation --> Option 2 -- page-buffet
+/* ----------------------------------------------------------------------------- */
+function display_section_buffetpage_reservation(){}
+
+// CALLBACK FILTER : buffetpage_reservation_hidden -----------------------------
+function field_buffetpage_reservation_hidden(){
+    $buffetpage_reservation_hidden = esc_attr(get_option('buffetpage_reservation_hidden'));
+    ?>
+    <div class="">
+        <input type="checkbox" id="buffetpage_reservation_hidden" name="buffetpage_reservation_hidden" value="1" <?php checked(1, get_option('buffetpage_reservation_hidden'), true); ?> />
+        <span class="info">Masquer cette section sur la page buffet</span>
+    </div>
+    <?php
+} // END => field_buffetpage_reservation_hidden

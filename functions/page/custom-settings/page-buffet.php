@@ -18,6 +18,7 @@ Version: 1.0
     section 2 : message
     section 3 : description buffet
     section 4 : tarif
+    section 5 : info reservation
 
 */
 
@@ -285,3 +286,28 @@ register_setting(
     'avatar_tarif', // field ID
     'handle_avatartarif_file' // Callback function
 ); // end -> register : handle_avatartarif_file
+
+
+/* ----------------------------------------------------------------------------- */
+// SECTION 5 : section-reservation --> Option 2 -- page-buffet
+/* ----------------------------------------------------------------------------- */
+// SETTINGS
+add_settings_section(
+    'section_buffetpage_reservation',                               // ID
+    __('Section 5 - Réservation', 'section_buffetpage_reservation'),      // TITLE
+    'display_section_buffetpage_reservation',                       // CALLBACK
+    'page-buffet'                                             // PAGE
+); // end --> section : section_buffetpage_cover
+
+// FIELDS : buffetpage_reservation_hidden ----------------------------------------------
+add_settings_field(
+    'buffetpage_reservation_hidden',                                // ID
+    __('Cacher la section', 'section_buffetpage_reservation'),      // LABEL
+    'field_buffetpage_reservation_hidden',                          // CALLBACK FUNCTION
+    'page-buffet',                                            // MENU PAGE SLUG
+    'section_buffetpage_reservation'                                // SECTION ID
+); // end --> field : buffetpage_cover_hidden
+
+
+// REGISTER : section-reservation
+register_setting('group-page-buffet', 'buffetpage_reservation_hidden');

@@ -6412,7 +6412,7 @@ ul {
 }
 
 .icon-drink {
-  width: 30px;
+  width: 25px;
   height: auto;
   margin-left: 10px;
   margin-right: 10px;
@@ -6447,6 +6447,10 @@ ul {
 
 .card-tarif {
   height: 300px;
+}
+
+.card-tarif .card-body {
+  padding-bottom: 0;
 }
 
 .card-collapse {
@@ -6676,7 +6680,7 @@ footer {
 }
 
 .item-drink {
-  line-height: 2rem;
+  line-height: 1rem;
   margin: 10px 10px;
 }
 
