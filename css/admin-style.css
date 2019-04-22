@@ -210,7 +210,6 @@ Version: 1.0
 }
 
 
-
 /* -------------------------------------------------------------------------- */
 /* CUSTOM PAGE service mennu */
 /* -------------------------------------------------------------------------- */
@@ -237,4 +236,30 @@ Version: 1.0
 .backend-item-serveice-quatre input[type="text"],
 .backend-item-serveice-cinq input[type="text"]{
     width: 300px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CUSTOM PAGE EMPORTER */
+/* -------------------------------------------------------------------------- */
+
+.backend-reduction input[type="text"]{
+    width: 60px;
+}
+
+.backend-offert td{
+    padding: 2px 0;
+    padding-right: 15px;
+}
+.backend-offert input[type="text"]{
+    width: 100px;
+}
+
+.backend-item-barquette, .backend-card-img-bg{
+    display: table-cell;
+    border-right: 1px solid #e5e5e5;
+    padding: 10px;
+}
+
+.backend-info-barqquette input[type="text"]{
+    width: 100%;
 }
