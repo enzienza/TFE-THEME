@@ -29,7 +29,7 @@ function add_page_formule_buffet(){
         'formule-sans-boissons',                // slug_menu
         'theme_page_formule_buffet',            // function qui rendra la sortie
         'dashicons-admin-page',                 // icon
-        100                                     // position
+        101                                     // position
     );
 } // END => add_page_formule_buffet
 

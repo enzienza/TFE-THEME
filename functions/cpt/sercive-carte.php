@@ -52,7 +52,7 @@ function CPT_cartes() {
         'capability_type'       => 'post',
         'has_archive'           => true,
         'hierarchical'          => false,
-        'menu_position'         => 111,
+        'menu_position'         => 103,
         'menu_icon'             => 'dashicons-excerpt-view',
         'supports' => array(
             'title',           // titre

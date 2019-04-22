@@ -16,7 +16,7 @@
         // SINON
         // => Afficher la section
         ?>
-        <section id="home-section-carte" class="bg-section">
+        <section id="menu-section-carte" class="bg-section">
 
             <?php
             // SI cartepage_cover_affiche_img EST COCHE
@@ -34,7 +34,7 @@
                 <h1><?php echo get_option('cartepage_cover_titre'); ?></h1>
                 <p><?php echo get_option('cartepage_cover_texte'); ?></p>
             </div><!-- / .container -->
-        </section><!-- / #home-section-carte .bg-carte-->
+        </section><!-- / #menu-section-carte .bg-carte-->
         <?php
     }
 ?>
@@ -104,14 +104,141 @@
 
                 </div><!-- / .col-md-6 col-12 -->
             </div><!-- / .row -->
-        </section><!-- / #home-section-carte .bg-carte-->
+        </section><!-- / #menu-section-carte .bg-carte-->
         <?php
     }
 ?>
 
 <!-- START section 4 : carte-content -->
-<section>
-    <h1>Que c'est beau</h1>
+<section id="carte-content" class="container">
+    <!-- START : filter - nav-secondaire -->
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="carte-memu"
+                data-toggle="tab" href="#menu" role="tab" aria-controls="menu"
+                aria-selected="true">
+                    <img src="<?php echo get_template_directory_uri().'/img/icon/menu.png' ?>" alt="" style="width: 21px; height 21px;">
+                    <p>Menu</p>
+                </a>
+            </li>
+            <!-- region repete ici -->
+            <?php
+                wp_reset_postdata();
+
+                $args = array(
+                    'post_type'      => 'cartes',
+                    'posts_per_page' => 5,
+                    'orderby'        => 'id',
+                    'order'          => 'DESC'
+                );
+                $my_query = new WP_query($args);
+                if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+             ?>
+
+             <li class="nav-item">
+                 <a class="nav-link" id="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>-tab"
+                    data-toggle="tab" href="#<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>"
+                    role="tab" aria-controls="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>"
+                    aria-selected="false">
+                    <img src="<?php echo get_post_meta($post->ID, 'icon-carte', true); ?>" alt="" style="width: 21px; height 21px;">
+                    <p><?php the_title(); ?></p>
+                </a>
+             </li>
+
+            <?php endwhile; endif;  wp_reset_postdata(); ?>
+
+        </ul><!-- / .nav nav-tabs -->
+
+
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="menu" role="tabpanel" aria-labelledby="carte-memu">
+
+                <h1>Menu</h1>
+
+                <div id="table-riz" class="card card-menu">
+                    <h1>Table de riz</h1>
+                    <div class="box-info">
+                        <p class="prix">30$</p>
+                        <ul>
+                            <li>Prix par personnne</li>
+                            <li>Minimum 2 couvert</li>
+                        </ul>
+                    </div><!-- / .box-info -->
+
+                    <div class="service-1">
+                        <h2>Entrée froide</h2>
+                        <p class="content-servive-1"></p>
+                    </div><!-- / .service-1 -->
+
+                    <div class="service-2">
+                        <h2>Entrée chaude aux choix</h2>
+                        <div class="content-servive-2">
+                            <ul>
+                                <li class="item-choix"></li>
+                                <li class="item-choix"></li>
+                                <li class="item-choix"></li>
+                                <li class="item-choix"></li>
+                            </ul>
+                        </div>
+                    </div><!-- / .service-2 -->
+
+                    <div class="service-3">
+                        <h2>Plateux des 5 specialité</h2>
+                        <div class="content-servive-3">
+                            <ul>
+                                <li class="item-specialite"></li>
+                                <li class="item-specialite"></li>
+                                <li class="item-specialite"></li>
+                                <li class="item-specialite"></li>
+                            </ul>
+                        </div>
+                    </div><!-- / .service-3 -->
+
+                    <div class="service-4">
+                        <h2>Desert</h2>
+                        <p class="content-servive-4"></p>
+                    </div><!-- / .service-4 -->
+
+                </div><!-- / #table-riz .card-menu -->
+
+
+
+
+
+            </div>
+
+
+            <!-- region retete ici -->
+            <?php
+                wp_reset_postdata();
+
+                $args = array(
+                    'post_type'      => 'cartes',
+                    'posts_per_page' => 5,
+                    'orderby'        => 'id',
+                    'order'          => 'DESC'
+                );
+                $my_query = new WP_query($args);
+                if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+             ?>
+
+
+             <div class="tab-pane fade" id="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>" role="tabpanel" aria-labelledby="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>-tab">
+                 <div class="bg-img-cuisine">
+                     <h1><?php the_title(); ?></h1>
+                     <div class="">
+                         <img src="<?php echo get_post_meta($post->ID, 'bg-carte', true); ?>" alt="<?php the_title(); ?>" />
+                     </div>
+                 </div>
+             </div>
+
+        <?php endwhile; endif;  wp_reset_postdata(); ?>
+
+</div><!-- / .tab-content -->
+
+
 </section>
 
 
@@ -130,12 +257,7 @@
 
         </section><!-- /  .bg-carte-->
         <?php
-    } 
+    }
 ?>
-
-
-
-
-
 
 <?php get_footer(); ?>
