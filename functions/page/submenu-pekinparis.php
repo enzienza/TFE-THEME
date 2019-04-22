@@ -119,7 +119,7 @@ function theme_page_option_theme(){
                         ?>
                             <h3 class="wp-heading-inline">Page à emporter</h3>
                             <div class="form-custom" >
-                                <?php //settings_fields( 'group-page-emporter' );?>
+                                <?php settings_fields( 'group-page-emporter' );?>
                                 <?php do_settings_sections( 'page-emporter' ); ?>
                             </div><!-- / .form-custom -->
                         <?php
@@ -187,7 +187,7 @@ function custom_settings_option_theme(){
 
 
     // Option 4 -- page-emporter  ----------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/page-emporter.php';
+    require get_template_directory().'/functions/page/custom-settings/page-emporter.php';
 
 
     // Option 5 -- page-event  -------------------------------------------------
@@ -216,7 +216,7 @@ require get_template_directory().'/functions/page/view-form/page-carte.php';
 
 
 // Option 4 -- page-emporter  --------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/page-emporter.php';
+require get_template_directory().'/functions/page/view-form/page-emporter.php';
 
 
 // Option 5 -- page-event  -----------------------------------------------------
