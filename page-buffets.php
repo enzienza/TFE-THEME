@@ -1597,11 +1597,6 @@
 
     if(checked(1, get_option('buffetpage_reservation_hidden'), false)){
         ?>
-        <?php
-    } else {
-        // SINON
-        // => Afficher la section
-        ?>
         <section class="reservation text-center">
             <h1>Réserver maintenant</h1>
             <p>

@@ -110,7 +110,7 @@ function theme_page_option_theme(){
                         ?>
                             <h3 class="wp-heading-inline">Page service à la carte</h3>
                             <div class="form-custom" >
-                                <?php //settings_fields( 'group-page-carte' );?>
+                                <?php settings_fields( 'group-page-carte' );?>
                                 <?php do_settings_sections( 'page-carte' ); ?>
                             </div><!-- / .form-custom -->
                         <?php
@@ -183,7 +183,7 @@ function custom_settings_option_theme(){
 
 
     // Option 3 -- page-carte  -------------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/page-carte.php';
+    require get_template_directory().'/functions/page/custom-settings/page-carte.php';
 
 
     // Option 4 -- page-emporter  ----------------------------------------------
@@ -212,7 +212,7 @@ require get_template_directory().'/functions/page/view-form/page-buffet.php';
 
 
 // Option 3 -- page-carte  -----------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/page-carte.php';
+require get_template_directory().'/functions/page/view-form/page-carte.php';
 
 
 // Option 4 -- page-emporter  --------------------------------------------------
