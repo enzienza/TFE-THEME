@@ -139,7 +139,7 @@ function custom_settings_sercive_menu(){
     require get_template_directory().'/functions/page/custom-settings/menu-table-riz.php';
 
     // Option 2 -- HORAIRE -----------------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/menu-fondu.php';
+    require get_template_directory().'/functions/page/custom-settings/menu-fondu.php';
 
 } // END ==> custom_settings_sercive_menu
 
@@ -153,4 +153,4 @@ function custom_settings_sercive_menu(){
 require get_template_directory().'/functions/page/view-form/menu-table-riz.php';
 
 // Option 2 -- HORAIRE ---------------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/menu-fondu.php';
+require get_template_directory().'/functions/page/view-form/menu-fondu.php';

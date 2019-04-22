@@ -209,6 +209,55 @@
 
                 </div><!-- / #table-riz .card-menu -->
 
+                <div id="fondu-chinoise" class="card card-menu">
+                    <div class="">
+                        <img src="<?php echo get_option('fondu_img_bg'); ?>" alt="">
+                    </div>
+                    <h1>Fondu chinoise</h1>
+                    <div class="box-info">
+                        <p class="prix"><?php echo get_option('fondu_prix'); ?></p>
+                        <ul>
+                            <li>Prix par personnne</li>
+                            <li>Minimum <?php echo get_option('fondu_couvert'); ?> couvert</li>
+                        </ul>
+                    </div><!-- / .box-info -->
+
+                    <div class="service-1">
+                        <h2><?php echo get_option('fondu_service_un_titre'); ?></h2>
+                        <div class="content-servive-2">
+                            <ul>
+                                <li class="item-choix"><?php echo get_option('fondu_service_un_choice_one'); ?></li>
+                                <li class="item-choix"><?php echo get_option('fondu_service_un_choice_two'); ?></li>
+                            </ul>
+                        </div>
+                    </div><!-- / .service-1 -->
+
+
+                    <div class="service-2">
+                        <h2><?php echo get_option('fondu_service_deux_titre'); ?></h2>
+                        <div class="content-servive-3">
+                            <ul>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_one'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_two'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_three'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_four'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_five'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_six'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_seven'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_eight'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_nine'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('fondu_service_deux_plat_ten'); ?></li>
+                            </ul>
+                        </div>
+                    </div><!-- / .service-2 -->
+
+
+                    <div class="service-3">
+                        <h2><?php echo get_option('fondu_service_tre_titre'); ?></h2>
+                        <p class="content-servive-4"><?php echo get_option('fondu_service_tre_txt'); ?></p>
+                    </div><!-- / .service-3 -->
+
+                </div><!-- / #fondu-chinoise .card-menu -->
 
             </div>
 
