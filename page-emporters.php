@@ -103,23 +103,79 @@
     </div><!-- /.row -->
 
     <!-- region repete => CPT-Emporter -->
-    <div class="">
-        Ici région répeter Filter
-    </div>
+    <!-- START : filter - nav-secondaire -->
+        <div class="toolbar mb2 mt2">
+            <?php
+                wp_reset_postdata();
 
-    <div class="row">
-        <!-- region repete => CPT-Emporter -->
-        <div class="col-md-3 .col-12">
-            <h1>Titre plat</h1>
-            <div class="">
-                image
-            </div>
-        </div>
-        <div class="col-md-9 .col-12">
-            <!-- region repeter => metabox repeatable-field -->
-            Table
-        </div>
-    </div>
+                $args = array(
+                    'post_type'      => 'emporters',
+                    'posts_per_page' => -1,
+                    'orderby'        => 'id',
+                    'order'          => 'DESC'
+                );
+                $my_query = new WP_query($args);
+                if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+             ?>
+
+            <button class="btn fil-cat" data-rel="<?php echo get_post_meta($post->ID, 'slug_emporter', true); ?>">
+                <img src="<?php echo get_post_meta($post->ID, 'icon-emporter', true); ?>" alt="" style="width: 21px; height 21px;">
+                <p><?php the_title(); ?></p>
+            </button>
+
+            <?php endwhile; endif;  wp_reset_postdata(); ?>
+        </div><!-- / .toolbar .mb2 .mt2 -->
+
+
+
+        <!-- START : grille -->
+        <div id="portfolio" class="">
+
+            <?php
+                wp_reset_postdata();
+
+                $args = array(
+                    'post_type'      => 'emporters',
+                    'posts_per_page' => -1,
+                    'orderby'        => 'id'
+                );
+                $my_query = new WP_query($args);
+                if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+             ?>
+
+            <div class="tile scale-anm <?php echo get_post_meta($post->ID, 'slug_emporter', true); ?>" style="background: url('<?php echo get_post_meta($post->ID, 'bg-emporter', true); ?>') ;">
+                <h3 class="titre"><?php the_title(); ?></h3>
+
+
+                <img src="<?php //echo get_post_meta($post->ID, 'icon', true); ?>" alt="">
+                <table class="table-carte" >
+                    <!-- <thead>
+                        <tr class="table-titre">
+                            <th class="td-numb">Num.</th>
+                            <th class="td-nom">Nom</th>
+                            <th class="td-price">Prix</th>
+                        </tr>
+                    </thead> -->
+                    <tbody>
+                        <?php
+                            // $repeatable_fields = get_post_meta($post->ID, 'repeatable_fields', true);
+                            // foreach ($repeatable_fields as $field) :
+
+                                ?>
+                                    <tr>
+                                        <td class="td-numb"><?php //echo $field['numb']; ?></td>
+                                        <td class="td-nom"><?php //echo $field['nom']; ?></td>
+                                        <td class="td-price"><?php //echo $field['price'];  ?></td>
+                                    </tr>
+                                <?php
+                            // endforeach;
+                         ?>
+                    </tbody>
+                </table>
+            </div><!-- / .tile .scale-anm -->
+            <?php endwhile; endif;  wp_reset_postdata(); ?>
+        </div><!-- / #portfolio -->
+
 
 </section><!-- / #carte-emporter .container -->
 
@@ -152,7 +208,7 @@
     <div class="row">
         <div class="col-md-7 col-12 box-left">
             <ul>
- 
+
                     <!-- item-buffet-takeaway -->
                 <li class="item-buffet-takeaway row">
                     <div class="col-4">

@@ -6,10 +6,10 @@ Copyright: 2019 © Enza Lombardo
 Version: 1.0
 */
 
-.post-type-cartes #postdivrich{
+.post-type-cartes #postdivrich,
+.post-type-emporters #postdivrich{
     display: none;
 }
-
 
 
 /* -------------------------------------------------------------------------- */
