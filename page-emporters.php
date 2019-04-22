@@ -152,19 +152,19 @@
     <div class="row">
         <div class="col-md-7 col-12 box-left">
             <ul>
-
+ 
                     <!-- item-buffet-takeaway -->
                 <li class="item-buffet-takeaway row">
                     <div class="col-4">
-                        <img src="" alt="">
+                        <img src="<?php echo get_option('emporterpage_formule_uno'); ?>" alt="">
                     </div>
 
                     <div class="col-5">
-                        <p>1 barquette</p>
+                        <p><?php echo get_option('txt_barquette_uno'); ?></p>
                     </div>
 
                     <div class="col-3">
-                        <p class="prix">8,00€</p>
+                        <p class="prix"><?php echo get_option('prix_barquete_uno'); ?></p>
                     </div>
 
                 </li><!-- /.item-buffet-takeaway -->
@@ -172,15 +172,15 @@
                 <!-- item-buffet-takeaway -->
                 <li class="item-buffet-takeaway row">
                     <div class="col-4">
-                        <img src="" alt="">
+                        <img src="<?php echo get_option('emporterpage_formule_due'); ?>" alt="">
                     </div>
 
                     <div class="col-5">
-                        <p>1 barquette</p>
+                        <p><?php echo get_option('txt_barquette_due'); ?></p>
                     </div>
 
                     <div class="col-3">
-                        <p class="prix">8,00€</p>
+                        <p class="prix"><?php echo get_option('prix_barquette_due'); ?></p>
                     </div>
 
                 </li><!-- /.item-buffet-takeaway -->
@@ -188,15 +188,15 @@
                 <!-- item-buffet-takeaway -->
                 <li class="item-buffet-takeaway row">
                     <div class="col-4">
-                        <img src="" alt="">
+                        <img src="<?php echo get_option('emporterpage_formule_tre'); ?>" alt="">
                     </div>
 
                     <div class="col-5">
-                        <p>1 barquette</p>
+                        <p><?php echo get_option('txt_barquette_tre'); ?></p>
                     </div>
 
                     <div class="col-3">
-                        <p class="prix">8,00€</p>
+                        <p class="prix"><?php echo get_option('prix_barquette_tre'); ?></p>
                     </div>
 
                 </li><!-- /.item-buffet-takeaway -->

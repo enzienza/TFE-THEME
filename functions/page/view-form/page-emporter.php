@@ -322,18 +322,25 @@ function handle_file_formule_tre_emporterpage($options){
 
 // FIELDS : emporterpage_barquette_buffet --------------------------------------
 function field_emporterpage_barquette_buffet(){
+    $txt_barquette_uno = esc_attr(get_option('txt_barquette_uno'));
+    $prix_barquete_uno = esc_attr(get_option('prix_barquete_uno'));
+    $txt_barquette_due = esc_attr(get_option('txt_barquette_due'));
+    $prix_barquette_due = esc_attr(get_option('prix_barquette_due'));
+    $txt_barquette_tre = esc_attr(get_option('txt_barquette_tre'));
+    $prix_barquette_tre = esc_attr(get_option('prix_barquette_tre'));
+
     ?>
 
     <div class="backend-item-barquette">
         <h4>1ère formule</h4>
         <div class="backend-info-barqquette">
             <label for="">Texte</label>
-            <input type="text" id="" name="" value="<?php echo get_option(''); ?>" />
+            <input type="text" id="txt_barquette_uno" name="txt_barquette_uno" value="<?php echo get_option('txt_barquette_uno'); ?>" />
         </div>
 
         <div class="backend-info-barqquette">
             <label for="">Prix</label>
-            <input type="text" id="" name="" value="<?php echo get_option(''); ?>" />
+            <input type="text" id="prix_barquete_uno" name="prix_barquete_uno" value="<?php echo get_option('prix_barquete_uno'); ?>" />
         </div>
 
         <div class="backend-card-img-bg">
@@ -352,12 +359,12 @@ function field_emporterpage_barquette_buffet(){
         <h4>2e formule</h4>
         <div class="backend-info-barqquette">
             <label for="">Texte</label>
-            <input type="text" id="" name="" value="<?php echo get_option(''); ?>" />
+            <input type="text" id="txt_barquette_due" name="txt_barquette_due" value="<?php echo get_option('txt_barquette_due'); ?>" />
         </div>
 
         <div class="backend-info-barqquette">
             <label for="">Prix</label>
-            <input type="text" id="" name="" value="<?php echo get_option(''); ?>" />
+            <input type="text" id="prix_barquette_due" name="prix_barquette_due" value="<?php echo get_option('prix_barquette_due'); ?>" />
         </div>
 
         <div class="backend-card-img-bg">
@@ -377,12 +384,12 @@ function field_emporterpage_barquette_buffet(){
 
         <div class="backend-info-barqquette">
             <label for="">Texte</label>
-            <input type="text" id="" name="" value="<?php echo get_option(''); ?>" />
+            <input type="text" id="txt_barquette_tre" name="txt_barquette_tre" value="<?php echo get_option('txt_barquette_tre'); ?>" />
         </div>
 
         <div class="backend-info-barqquette">
             <label for="">Prix</label>
-            <input type="text" id="" name="" value="<?php echo get_option(''); ?>" />
+            <input type="text" id="prix_barquette_tre" name="prix_barquette_tre" value="<?php echo get_option('prix_barquette_tre'); ?>" />
         </div>
 
         <div class="backend-card-img-bg">

@@ -239,6 +239,13 @@ add_settings_field(
 
 
 // REGISTER : section_emporter_buffet
+/* --- formule 1 --- */
+register_setting('group-page-emporter', 'txt_barquette_uno');
+register_setting('group-page-emporter', 'prix_barquete_uno');
+register_setting('group-page-emporter', 'txt_barquette_due');
+register_setting('group-page-emporter', 'prix_barquette_due');
+register_setting('group-page-emporter', 'txt_barquette_tre');
+register_setting('group-page-emporter', 'prix_barquette_tre');
 
 
 // REGISTER : emporter_buffet_avatar
