@@ -87,25 +87,25 @@ function theme_page_sercive_menu(){
             </h2><!-- / .nav-tab-wrapper -->
 
 
-                <form class=""  method="post" action="options.php" enctype="multipart/form-data">
+                <form class="service-menu"  method="post" action="options.php" enctype="multipart/form-data">
 
                     <?php
 
                     if($_GET['tab'] == 'fondu'){
                         ?>
                         <h3>Fondu chinoise</h3>
-                        <div class="">
+                        <!-- <div class=""> -->
                             <?php //settings_fields( 'group-fondu' );?>
                             <?php //do_settings_sections( 'fondu' ); ?>
-                        </div>
+                        <!-- </div> -->
                         <?php
                     } else {
                         ?>
                         <h3 class="wp-heading-inline">Table de riz</h3>
-                        <div class="form-custom">
+                        <!-- <div class="form-custom"> -->
                             <?php settings_fields( 'group-table-riz' );?>
                             <?php do_settings_sections( 'table-riz' ); ?>
-                        </div>
+                        <!-- </div> -->
                         <?php
                     }
 

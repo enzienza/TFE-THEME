@@ -212,27 +212,29 @@ Version: 1.0
 
 
 /* -------------------------------------------------------------------------- */
-/* CUSTOM PAGE ALBUM */
+/* CUSTOM PAGE service mennu */
 /* -------------------------------------------------------------------------- */
 
-#table-repeatable-fieldset .remove-row{
-    padding: 0 15px;
-    border-radius: 15px;
-    font-size: large;
+.backend-min-couvert input[type="text"]{
+    width: 40px;
 }
 
-#table-repeatable-fieldset .remove-row:hover{
-    background: red;
-    color: #fff;
+.service-menu .form-table tr{
+    border-bottom: 1px solid #ccc;
 }
 
-#add-row:hover{
-    background: green;
-    color: #fff;
+.backend-item-serveice-un td,
+.backend-item-serveice-deux td,
+.backend-item-serveice-trois td,
+.backend-item-serveice-quatre td,
+.backend-item-serveice-cinq td{
+    padding: 2px 10px;
 }
 
-.button.btn-save.button-large:hover{
-    background: #008ec2;
-    border-color: #006799;
-    color: #fff;
+.backend-item-serveice-un input[type="text"],
+.backend-item-serveice-deux input[type="text"],
+.backend-item-serveice-trois input[type="text"],
+.backend-item-serveice-quatre input[type="text"],
+.backend-item-serveice-cinq input[type="text"]{
+    width: 300px;
 }

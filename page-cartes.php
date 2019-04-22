@@ -158,53 +158,56 @@
                 <h1>Menu</h1>
 
                 <div id="table-riz" class="card card-menu">
+                    <div class="">
+                        <img src="<?php echo get_option('tableriz_img_bg'); ?>" alt="">
+                    </div>
                     <h1>Table de riz</h1>
                     <div class="box-info">
-                        <p class="prix">30$</p>
+                        <p class="prix"><?php echo get_option('tableriz_prix'); ?></p>
                         <ul>
                             <li>Prix par personnne</li>
-                            <li>Minimum 2 couvert</li>
+                            <li>Minimum <?php echo get_option('tableriz_couvert'); ?> couvert</li>
                         </ul>
                     </div><!-- / .box-info -->
 
                     <div class="service-1">
-                        <h2>Entrée froide</h2>
-                        <p class="content-servive-1"></p>
+                        <h2><?php echo get_option('tableriz_service_un_titre'); ?></h2>
+                        <p class="content-servive-1"><?php echo get_option('tableriz_service_un_txt'); ?></p>
                     </div><!-- / .service-1 -->
 
                     <div class="service-2">
-                        <h2>Entrée chaude aux choix</h2>
+                        <h2><?php echo get_option('tableriz_service_deux_titre'); ?></h2>
                         <div class="content-servive-2">
                             <ul>
-                                <li class="item-choix"></li>
-                                <li class="item-choix"></li>
-                                <li class="item-choix"></li>
-                                <li class="item-choix"></li>
+                                <li class="item-choix"><?php echo get_option('tableriz_service_deux_choice_one'); ?></li>
+                                <li class="item-choix"><?php echo get_option('tableriz_service_deux_choice_two'); ?></li>
+                                <li class="item-choix"><?php echo get_option('tableriz_service_deux_choice_three'); ?></li>
+                                <li class="item-choix"><?php echo get_option('tableriz_service_deux_choice_four'); ?></li>
                             </ul>
                         </div>
                     </div><!-- / .service-2 -->
 
+
                     <div class="service-3">
-                        <h2>Plateux des 5 specialité</h2>
+                        <h2><?php echo get_option('tableriz_service_trois_titre'); ?></h2>
                         <div class="content-servive-3">
                             <ul>
-                                <li class="item-specialite"></li>
-                                <li class="item-specialite"></li>
-                                <li class="item-specialite"></li>
-                                <li class="item-specialite"></li>
+                                <li class="item-specialite"><?php echo get_option('tableriz_service_trois_plat_one'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('tableriz_service_trois_plat_two'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('tableriz_service_trois_plat_three'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('tableriz_service_trois_plat_four'); ?></li>
+                                <li class="item-specialite"><?php echo get_option('tableriz_service_trois_plat_five'); ?></li>
                             </ul>
                         </div>
                     </div><!-- / .service-3 -->
 
+
                     <div class="service-4">
-                        <h2>Desert</h2>
-                        <p class="content-servive-4"></p>
+                        <h2><?php echo get_option('tableriz_service_quatre_titre'); ?></h2>
+                        <p class="content-servive-4"><?php echo get_option('tableriz_service_quatre_txt'); ?></p>
                     </div><!-- / .service-4 -->
 
                 </div><!-- / #table-riz .card-menu -->
-
-
-
 
 
             </div>
