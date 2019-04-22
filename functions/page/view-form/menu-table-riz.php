@@ -111,7 +111,7 @@ function field_tableriz_servie_deux(){
             </tr>
             <tr class="">
                 <td><label for="">Choix 1</label></td>
-                <td><input type="text" id="tableriz_service_deux_choice_one" name=""tableriz_service_deux_choice_one value="<?php echo get_option('tableriz_service_deux_choice_one'); ?>" /></td>
+                <td><input type="text" id="tableriz_service_deux_choice_one" name="tableriz_service_deux_choice_one" value="<?php echo get_option('tableriz_service_deux_choice_one'); ?>" /></td>
             </tr>
             <tr class="">
                 <td><label for="">Choix 2</label></td>

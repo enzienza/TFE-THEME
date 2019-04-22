@@ -95,8 +95,8 @@ function theme_page_sercive_menu(){
                         ?>
                         <h3>Fondu chinoise</h3>
                         <!-- <div class=""> -->
-                            <?php //settings_fields( 'group-fondu' );?>
-                            <?php //do_settings_sections( 'fondu' ); ?>
+                            <?php settings_fields( 'group-fondu' );?>
+                            <?php do_settings_sections( 'fondu' ); ?>
                         <!-- </div> -->
                         <?php
                     } else {
@@ -136,10 +136,10 @@ add_action('admin_init', 'custom_settings_sercive_menu');
 function custom_settings_sercive_menu(){
 
     // Option 1 -- INFO-RESTO --------------------------------------------------
-    require get_template_directory().'/functions/page/custom-settings/table-riz.php';
+    require get_template_directory().'/functions/page/custom-settings/menu-table-riz.php';
 
     // Option 2 -- HORAIRE -----------------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/fondu.php';
+    // require get_template_directory().'/functions/page/custom-settings/menu-fondu.php';
 
 } // END ==> custom_settings_sercive_menu
 
@@ -150,7 +150,7 @@ function custom_settings_sercive_menu(){
 /* ----------------------------------------------------------------------------- */
 
 // Option 1 -- INFO-RESTO ------------------------------------------------------
-require get_template_directory().'/functions/page/view-form/table-riz.php';
+require get_template_directory().'/functions/page/view-form/menu-table-riz.php';
 
 // Option 2 -- HORAIRE ---------------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/fondu.php';
+// require get_template_directory().'/functions/page/view-form/menu-fondu.php';
