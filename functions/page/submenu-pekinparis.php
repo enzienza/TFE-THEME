@@ -128,7 +128,7 @@ function theme_page_option_theme(){
                         ?>
                             <h3 class="wp-heading-inline">Page des évènements</h3>
                             <div class="form-custom" >
-                                <?php //settings_fields( 'group-page-event' );?>
+                                <?php settings_fields( 'group-page-event' );?>
                                 <?php do_settings_sections( 'page-event' ); ?>
                             </div><!-- / .form-custom -->
                         <?php
@@ -191,7 +191,7 @@ function custom_settings_option_theme(){
 
 
     // Option 5 -- page-event  -------------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/page-event.php';
+    require get_template_directory().'/functions/page/custom-settings/page-event.php';
 
     // Option 6 -- page-contact  -----------------------------------------------
     // require get_template_directory().'/functions/page/custom-settings/page-contact.php';
@@ -220,7 +220,7 @@ require get_template_directory().'/functions/page/view-form/page-emporter.php';
 
 
 // Option 5 -- page-event  -----------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/page-event.php';
+require get_template_directory().'/functions/page/view-form/page-event.php';
 
 // Option 6 -- page-contact  ---------------------------------------------------
 // require get_template_directory().'/functions/page/view-form/page-contact.php';
