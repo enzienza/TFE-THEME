@@ -101,8 +101,13 @@
             <div class="card-body">
                 <h3 class="card-title"><?php the_title(); ?></h3>
                 <ul class="info-event">
-                    <li class="date"></li>
-                    <li class="heure"></li>
+                    <li class="date">
+                        <?php $date = get_post_meta($post->ID, 'date_event', true); if($date != ''){echo date_i18n("j M Y", strtotime($date));} ?>
+                        <span>/</span>
+                    </li>
+                    <li class="heure">
+                        <?php echo get_post_meta($post->ID, 'heure_event', true); ?>
+                    </li>
                 </ul>
                 <div class="btn-event row">
                     <a href="<?php the_permalink(); ?>" class="btn btn-outline-light">
