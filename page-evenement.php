@@ -3,7 +3,6 @@
 ?>
 
 <?php get_header(); ?>
-
 <!-- START section 1 : section-eventpage_cover -->
 <?php
     // SI eventpage_cover_hidden EST COCHE
@@ -121,6 +120,8 @@
     </div><!-- /.row -->
 </section><!-- /#section-event -->
 
+
+
 <!-- START section 4 : section-reservation -->
 <?php
     // SI eventpage_reservation_hidden EST COCHE
@@ -138,5 +139,4 @@
         <?php
     }
 ?>
-
 <?php get_footer(); ?>
