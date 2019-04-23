@@ -144,7 +144,7 @@ require get_template_directory().'/functions/page/service-menu.php';
 
 require get_template_directory(). '/functions/cpt/sercive-carte.php';
 require get_template_directory(). '/functions/cpt/emporter.php';
-// require get_template_directory(). '/functions/cpt/event.php';
+require get_template_directory(). '/functions/cpt/evenement.php';
 
 
 // require get_template_directory(). '/functions/cpt/album.php';

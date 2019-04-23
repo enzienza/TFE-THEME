@@ -78,55 +78,48 @@
 ?>
 
 <!-- START section 3 : carte-event -->
-<section class="container">
+<section id="section-event" class="container">
     <div class="row">
 
-            <?php
-            // wp_reset_postdata();
-            //
-            // $args = array(
-            //     'post_type' => 'events',
-            //     'posts_per_page' => -1,
-            //     'orderby' => 'id',
-            //     'order' => 'DESC'
-            // );
-            // $my_query = new WP_query($args);
-            // if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
-            ?>
+        <!-- DEBUT : region repeter -->
+        <?php
+            wp_reset_postdata();
 
-            <div class="col-md-4 col-12 card card-event hovered">
-                <div class="img-event">
-                    <?php //the_post_thumbnail(); ?>
-                </div> <!-- ./ img-event -->
-                <div class="card-body">
-                    <h3 class="card-title">
-                        <?php //the_title(); ?>
-                    </h3>
-                    <ul class="info-event">
-                        <li class="date">
-                            <?php //$date = get_post_meta($post->ID, 'date_event', true); if($date != ''){echo date_i18n("j M Y", strtotime($date));} ?>
-                            <span>/</span>
-                        </li>
-                        <li class="heure">
-                            <?php //echo get_post_meta($post->ID, 'heure_event', true); ?> <span>/</span>
-                        </li>
-                        <li class="localite">
-                            <?php //echo get_post_meta($post->ID, 'localite_event', true); ?>
-                        </li>
-                    </ul> <!-- ./ info-event -->
-                    <div class="btn-event row">
-                        <div class="col-12">
-                            <a href="<?php //the_permalink(); ?>" class="btn btn-outline-light">
-                                Voir détails
-                            </a>
-                        </div> <!-- ./ col-12 -->
-                    </div> <!-- .btn-event -->
-                </div> <!-- ./ card-body -->
-            </div> <!-- ./ hovered row -->
+            $args = array(
+                'post_type' => 'evenements',    // nom du CPT
+                'posts_per_page' => -1,      // limite
+                'orderby' => 'id'
+            );
+            $my_query = new WP_query($args);
+            if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+        ?>
 
-        <?php //endwhile; endif;  wp_reset_postdata(); ?>
+        <div class="col-md-4 col-12 card card-event hovered">
+            <div class="img-event">
+                <?php the_post_thumbnail(); ?>
+            </div><!-- / -->
 
-</section>
+            <div class="card-body">
+                <h3 class="card-title"><?php the_title(); ?></h3>
+                <ul class="info-event">
+                    <li class="date"></li>
+                    <li class="heure"></li>
+                </ul>
+                <div class="btn-event row">
+                    <a href="<?php the_permalink(); ?>" class="btn btn-outline-light">
+                        Voir détail
+                    </a>
+                </div>
+            </div>
+
+        </div><!-- /.col-md-4 .col-12 .card .card-event .hovered -->
+
+
+        <?php endwhile; endif;  wp_reset_postdata(); ?>
+        <!-- FIN : Region repeter -->
+
+    </div><!-- /.row -->
+</section><!-- /#section-event -->
 
 <!-- START section 4 : section-reservation -->
 <?php
