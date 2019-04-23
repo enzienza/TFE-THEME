@@ -137,7 +137,7 @@ function theme_page_option_theme(){
                         ?>
                             <h3 class="wp-heading-inline">Page de contact</h3>
                             <div class="form-custom" >
-                                <?php //settings_fields( 'group-page-contact' );?>
+                                <?php settings_fields( 'group-page-contact' );?>
                                 <?php do_settings_sections( 'page-contact' ); ?>
                             </div><!-- / .form-custom -->
                         <?php
@@ -194,7 +194,7 @@ function custom_settings_option_theme(){
     require get_template_directory().'/functions/page/custom-settings/page-event.php';
 
     // Option 6 -- page-contact  -----------------------------------------------
-    // require get_template_directory().'/functions/page/custom-settings/page-contact.php';
+    require get_template_directory().'/functions/page/custom-settings/page-contact.php';
 
 
 } // END => custom_settings_option_theme
@@ -223,4 +223,4 @@ require get_template_directory().'/functions/page/view-form/page-emporter.php';
 require get_template_directory().'/functions/page/view-form/page-event.php';
 
 // Option 6 -- page-contact  ---------------------------------------------------
-// require get_template_directory().'/functions/page/view-form/page-contact.php';
+require get_template_directory().'/functions/page/view-form/page-contact.php';
