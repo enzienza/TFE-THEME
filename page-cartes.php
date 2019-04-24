@@ -44,7 +44,7 @@
     // SI cartepage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
 
-    if(checked(1, get_option('cartepage_message_hidden'), false)){
+    if(checked(1, get_option('cartepage_msg_hidden'), false)){
         ?>
         <?php
     } else {
@@ -66,7 +66,7 @@
                 }
                 ?>
                 <div class="col-md-6 col-12">
-                    <h2><?php echo get_option('cartepage_message_titre'); ?></h2>
+                    <h2><?php echo get_option('cartepage_msg_titre'); ?></h2>
 
                     <?php
                         // SI cartepage_mgs_chinois est COCHE
