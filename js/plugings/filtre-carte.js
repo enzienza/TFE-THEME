@@ -1,6 +1,6 @@
 /*
-* Name : menu.js
-* Description : menu top transparent, background color au scroll
+* Name : filter
+* Description : filtre
 * Author: Enza Lombardo
 * Author URI: www.enzalombardo.be
 * copyright : 2019 © Enza Lombardo

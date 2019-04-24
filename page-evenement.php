@@ -38,6 +38,28 @@
     }
 ?>
 
+
+<section id="menu-section-carte" class="bg-section">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+                    <?php
+                    // SI eventpage_cover_affiche_img EST COCHE
+                    // => Alors on affiche l'image en background
+
+                    if(checked(1, get_option('eventpage_cover_affiche_img'), false)){
+                        ?>
+                        <div class="img-cover">
+                            <img src="<?php echo get_option('eventpage_cover_bg_img'); ?>" alt="">
+                        </div><!-- .img-carte -->
+                        <?php
+                    }
+                    ?>
+				</div>
+			</div>
+		</div>
+</section>
+
 <!-- START section 2 : section-eventpage_message -->
 <?php
     // SI eventpage_cover_hidden EST COCHE

@@ -18,12 +18,13 @@
     <!-- ===================== DEBUT HEADER ===================== -->
     <header role="banner">
         <!-- debut => navbar -->
+
         <nav class="navbar fixed-top navbar-expand-md ">
             <div class="container">
                 <!-- debut -> logo -->
-                <a class="navbar-brand" href="<?php //echo esc_url( home_url( '/' ) ); ?>">
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="logo">
-                        <img src="<?php //echo get_template_directory_uri().'/img/logo-v2.png' ?>" alt="">
+                        Pékin - Paris<img src="<?php //echo get_template_directory_uri().'/img/logo-v2.png' ?>" alt="">
                     </div>
                 </a>
                 <!-- ./ logo -->

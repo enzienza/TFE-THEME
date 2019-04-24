@@ -1,0 +1,29 @@
+// main: ../style.scss
+
+
+.carousel .slide{
+    max-heigth: 400px;
+}
+
+.carousel-inner > .carousel-item{
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+.box-jumbotron{
+    position: relative;
+    bottom: 17rem;
+    text-align: center;
+    h1{
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    p{
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+}

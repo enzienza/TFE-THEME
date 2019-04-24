@@ -1,9 +1,11 @@
 /*
- * Name : menu.js
- * Author: Enza Lombardo
- * Description : menu top transparent, background color au scroll
- * Version : 1.0
- */
+* Name : menu
+* Description : menu top transparent, background color au scroll
+* Author: Enza Lombardo
+* Author URI: www.enzalombardo.be
+* copyright : 2019 © Enza Lombardo
+* Version : 1.0
+*/
 
 (function($) {
 
