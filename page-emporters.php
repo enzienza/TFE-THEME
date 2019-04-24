@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<!-- START section 1 : section-emporterpage_cover -->
+<!-- START section 1 : cover-page-emporter -->
 <?php
     // SI emporterpage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
@@ -16,25 +16,36 @@
         // SINON
         // => Afficher la section
         ?>
-        <section id="menu-section-carte" class="bg-section">
-
-            <?php
-            // SI emporterpage_cover_affiche_img EST COCHE
-            // => Alors on affiche l'image en background
-
-            if(checked(1, get_option('emporterpage_cover_affiche_img'), false)){
-                ?>
-                <div class="img-cover">
-                    <img src="<?php echo get_option('emporterpage_cover_bg_img'); ?>" alt="">
-                </div><!-- .img-carte -->
+        <section id="cover-page-emporter" class="carousel slide" data-ride="carousel" style="" >
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
                 <?php
-            }
-            ?>
-            <div class="container">
-                <h1><?php echo get_option('emporterpage_cover_titre'); ?></h1>
-                <p><?php echo get_option('emporterpage_cover_texte'); ?></p>
-            </div><!-- / .container -->
-        </section><!-- / #menu-section-carte .bg-carte-->
+                    // SI emporterpage_cover_affiche_img EST COCHE
+                    // => Alors on affiche l'image en background
+
+                    if(checked(1, get_option('emporterpage_cover_affiche_img'), false)){
+                        ?>
+                            <div class="carousel-item active" style="background-image: url(<?php echo get_option('emporterpage_cover_bg_img'); ?>);">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('emporterpage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('emporterpage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    } else {
+                        ?>
+                            <div class="carousel-item active" style="background-color:#333;">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('emporterpage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('emporterpage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    }
+                ?>
+
+            </div><!-- /.carousel -->
+        </section>
         <?php
     }
 ?>
@@ -180,28 +191,28 @@
 </section><!-- / #carte-emporter .container -->
 
 
-<!-- START section 5 : section-commander -->
+<!-- START section 4 : section-commande -->
 <?php
-    // SI emporterpage_commander_hidden EST COCHE
+    // SI emporterpage_reservation_hidden EST COCHE
     // => Alors il n'y a pas de section
 
     if(checked(1, get_option('emporterpage_commander_hidden'), false)){
         ?>
-        <section class="commander text-center">
+        <section class="box-phone text-center">
             <h1>Passer commande</h1>
             <p>
                 <?php echo get_option('inforesto_phone'); ?>
             </p>
 
-        </section><!-- /  .bg-carte-->
+        </section><!-- /  .bg-emporter-->
         <?php
     }
 ?>
 
-<!-- START section 5 : buffet-emporter -->
-<section id="buffet-emporter" class="container">
+<!-- START section 5 : emporter-emporter -->
+<section id="emporter-emporter" class="container">
     <div class="text-center">
-        <h1>Buffet à emporter</h1>
+        <h1>emporter à emporter</h1>
         <p>faites votre choix dans les entrées et plats préparés</p>
     </div>
 
@@ -209,8 +220,8 @@
         <div class="col-md-7 col-12 box-left">
             <ul>
 
-                    <!-- item-buffet-takeaway -->
-                <li class="item-buffet-takeaway row">
+                    <!-- item-emporter-takeaway -->
+                <li class="item-emporter-takeaway row">
                     <div class="col-4">
                         <img src="<?php echo get_option('emporterpage_formule_uno'); ?>" alt="">
                     </div>
@@ -223,10 +234,10 @@
                         <p class="prix"><?php echo get_option('prix_barquete_uno'); ?></p>
                     </div>
 
-                </li><!-- /.item-buffet-takeaway -->
+                </li><!-- /.item-emporter-takeaway -->
 
-                <!-- item-buffet-takeaway -->
-                <li class="item-buffet-takeaway row">
+                <!-- item-emporter-takeaway -->
+                <li class="item-emporter-takeaway row">
                     <div class="col-4">
                         <img src="<?php echo get_option('emporterpage_formule_due'); ?>" alt="">
                     </div>
@@ -239,10 +250,10 @@
                         <p class="prix"><?php echo get_option('prix_barquette_due'); ?></p>
                     </div>
 
-                </li><!-- /.item-buffet-takeaway -->
+                </li><!-- /.item-emporter-takeaway -->
 
-                <!-- item-buffet-takeaway -->
-                <li class="item-buffet-takeaway row">
+                <!-- item-emporter-takeaway -->
+                <li class="item-emporter-takeaway row">
                     <div class="col-4">
                         <img src="<?php echo get_option('emporterpage_formule_tre'); ?>" alt="">
                     </div>
@@ -255,14 +266,14 @@
                         <p class="prix"><?php echo get_option('prix_barquette_tre'); ?></p>
                     </div>
 
-                </li><!-- /.item-buffet-takeaway -->
+                </li><!-- /.item-emporter-takeaway -->
             </ul>
         </div><!-- /.box-left -->
         <div class="col-md-5 box-right">
-            <img src="<?php echo get_option('emporter_buffet_avatar'); ?>" alt="">
+            <img src="<?php echo get_option('emporter_emporter_avatar'); ?>" alt="">
         </div><!-- /.box-right -->
     </div><!-- /.row -->
 
-</section><!-- / #buffet-emporter .container -->
+</section><!-- / #emporter-emporter .container -->
 
 <?php get_footer(); ?>

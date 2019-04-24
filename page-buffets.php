@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<!-- START : section-buffetpage_cover -->
+<!-- START section 1 : cover-page-buffet -->
 <?php
     // SI buffetpage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
@@ -16,30 +16,41 @@
         // SINON
         // => Afficher la section
         ?>
-        <section id="home-section-buffet" class="bg-section">
-
-            <?php
-            // SI buffetpage_cover_affiche_img EST COCHE
-            // => Alors on affiche l'image en background
-
-            if(checked(1, get_option('buffetpage_cover_affiche_img'), false)){
-                ?>
-                <div class="img-cover">
-                    <img src="<?php echo get_option('buffetpage_cover_bg_img'); ?>" alt="">
-                </div><!-- .img-buffet -->
+        <section id="cover-page-buffet" class="carousel slide" data-ride="carousel" style="" >
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
                 <?php
-            }
-            ?>
-            <div class="container">
-                <h1><?php echo get_option('buffetpage_cover_titre'); ?></h1>
-                <p><?php echo get_option('buffetpage_cover_texte'); ?></p>
-            </div><!-- / .container -->
-        </section><!-- / #home-section-buffet .bg-buffet-->
+                    // SI buffetpage_cover_affiche_img EST COCHE
+                    // => Alors on affiche l'image en background
+
+                    if(checked(1, get_option('buffetpage_cover_affiche_img'), false)){
+                        ?>
+                            <div class="carousel-item active" style="background-image: url(<?php echo get_option('buffetpage_cover_bg_img'); ?>);">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('buffetpage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('buffetpage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    } else {
+                        ?>
+                            <div class="carousel-item active" style="background-color:#333;">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('buffetpage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('buffetpage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    }
+                ?>
+
+            </div><!-- /.carousel -->
+        </section>
         <?php
     }
 ?>
 
-<!-- START : section-buffetpage_message -->
+<!-- START section 2 : section-buffetpage_message -->
 <?php
     // SI buffetpage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
@@ -111,7 +122,7 @@
     }
 ?>
 
-<!-- START : section-description-buffet -->
+<!-- START section 3 : section-description-buffet -->
 <?php
     // SI buffetpage_desc_hidden EST COCHE
     // => Alors il n'y a pas de section
@@ -155,7 +166,7 @@
     }
 ?>
 
-<!-- START : section-tarif-buffet -->
+<!-- START section 4 : section-tarif-buffet -->
 <section id="section-tarif-buffet" class="container">
     <h1>Découvrez nos différents tarifs</h1>
     <div class="row">
@@ -1590,14 +1601,14 @@
 
 </section><!-- / #section-tarif-buffet -->
 
-<!-- START : section-reservation -->
+<!-- START section 5 : section-reservation -->
 <?php
     // SI buffetpage_reservation_hidden EST COCHE
     // => Alors il n'y a pas de section
 
     if(checked(1, get_option('buffetpage_reservation_hidden'), false)){
         ?>
-        <section class="reservation text-center">
+        <section class="box-phone text-center">
             <h1>Réserver maintenant</h1>
             <p>
                 <?php echo get_option('inforesto_phone'); ?>

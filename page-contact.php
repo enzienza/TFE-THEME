@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<!-- START section 1 : section-cartepage_cover -->
+<!-- START section 1 : cover-page-contact -->
 <?php
     // SI contactpage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
@@ -16,25 +16,36 @@
         // SINON
         // => Afficher la section
         ?>
-        <section id="menu-section-carte" class="bg-section">
-
-            <?php
-            // SI contactpage_cover_affiche_img EST COCHE
-            // => Alors on affiche l'image en background
-
-            if(checked(1, get_option('contactpage_cover_affiche_img'), false)){
-                ?>
-                <div class="img-cover">
-                    <img src="<?php echo get_option('contactpage_cover_bg_img'); ?>" alt="">
-                </div><!-- .img-carte -->
+        <section id="cover-page-contact" class="carousel slide" data-ride="carousel" style="" >
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
                 <?php
-            }
-            ?>
-            <div class="container">
-                <h1><?php echo get_option('contactpage_cover_titre'); ?></h1>
-                <p><?php echo get_option('contactpage_cover_texte'); ?></p>
-            </div><!-- / .container -->
-        </section><!-- / #menu-section-carte .bg-carte-->
+                    // SI contactpage_cover_affiche_img EST COCHE
+                    // => Alors on affiche l'image en background
+
+                    if(checked(1, get_option('contactpage_cover_affiche_img'), false)){
+                        ?>
+                            <div class="carousel-item active" style="background-image: url(<?php echo get_option('contactpage_cover_bg_img'); ?>);">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('contactpage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('contactpage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    } else {
+                        ?>
+                            <div class="carousel-item active" style="background-color:#333;">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('contactpage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('contactpage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    }
+                ?>
+
+            </div><!-- /.carousel -->
+        </section>
         <?php
     }
 ?>

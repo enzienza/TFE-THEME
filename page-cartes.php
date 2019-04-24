@@ -4,7 +4,8 @@
 
 <?php get_header(); ?>
 
-<!-- START section 1 : section-cartepage_cover -->
+
+<!-- START section 1 : cover-page-carte -->
 <?php
     // SI cartepage_cover_hidden EST COCHE
     // => Alors il n'y a pas de section
@@ -16,25 +17,36 @@
         // SINON
         // => Afficher la section
         ?>
-        <section id="menu-section-carte" class="bg-section">
-
-            <?php
-            // SI cartepage_cover_affiche_img EST COCHE
-            // => Alors on affiche l'image en background
-
-            if(checked(1, get_option('cartepage_cover_affiche_img'), false)){
-                ?>
-                <div class="img-cover">
-                    <img src="<?php echo get_option('cartepage_cover_bg_img'); ?>" alt="">
-                </div><!-- .img-carte -->
+        <section id="cover-page-carte" class="carousel slide" data-ride="carousel" style="" >
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
                 <?php
-            }
-            ?>
-            <div class="container">
-                <h1><?php echo get_option('cartepage_cover_titre'); ?></h1>
-                <p><?php echo get_option('cartepage_cover_texte'); ?></p>
-            </div><!-- / .container -->
-        </section><!-- / #menu-section-carte .bg-carte-->
+                    // SI cartepage_cover_affiche_img EST COCHE
+                    // => Alors on affiche l'image en background
+
+                    if(checked(1, get_option('cartepage_cover_affiche_img'), false)){
+                        ?>
+                            <div class="carousel-item active" style="background-image: url(<?php echo get_option('cartepage_cover_bg_img'); ?>);">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('cartepage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('cartepage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    } else {
+                        ?>
+                            <div class="carousel-item active" style="background-color:#333;">
+                                <div class="jumbotron">
+                                    <h1><?php echo get_option('cartepage_cover_titre'); ?></h1>
+                                    <p><?php echo get_option('cartepage_cover_texte'); ?></p>
+                                </div><!-- /.jumbotron -->
+                            </div><!-- /.carousel-item .active -->
+                        <?php
+                    }
+                ?>
+
+            </div><!-- /.carousel -->
+        </section>
         <?php
     }
 ?>
@@ -105,6 +117,26 @@
                 </div><!-- / .col-md-6 col-12 -->
             </div><!-- / .row -->
         </section><!-- / #menu-section-carte .bg-carte-->
+        <?php
+    }
+?>
+
+<!-- START section 3 : description -->
+<?php
+    // SI cartepage_cover_hidden EST COCHE
+    // => Alors il n'y a pas de section
+
+    if(checked(1, get_option('cartepage_desc_hidden'), false)){
+        ?>
+        <?php
+    } else {
+        // SINON
+        // => Afficher la section
+        ?>
+            <section class="container section-desc-carte">
+                <h1 class="text-center">Description</h1>
+                <p><?php echo get_option('cartepage_desc_txt_content'); ?></p>
+            </section>
         <?php
     }
 ?>
@@ -259,7 +291,7 @@
 
                 </div><!-- / #fondu-chinoise .card-menu -->
 
-            </div>
+            </div><!-- / #mennu .tab-pane -->
 
 
             <!-- region retete ici -->
@@ -277,7 +309,7 @@
              ?>
 
 
-             <div class="tab-pane fade" id="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>" role="tabpanel" aria-labelledby="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>-tab">
+                <div class="tab-pane fade" id="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>" role="tabpanel" aria-labelledby="<?php echo get_post_meta($post->ID, 'slug_carte', true); ?>-tab">
                  <div class="bg-img-cuisine">
                      <h1><?php the_title(); ?></h1>
                      <div class="">
@@ -286,9 +318,9 @@
                  </div>
              </div>
 
-        <?php endwhile; endif;  wp_reset_postdata(); ?>
+         <?php endwhile; endif;  wp_reset_postdata(); ?>
 
-</div><!-- / .tab-content -->
+        </div><!-- / .tab-content -->
 
 
 </section>
@@ -301,7 +333,7 @@
 
     if(checked(1, get_option('cartepage_reservation_hidden'), false)){
         ?>
-        <section class="reservation text-center">
+        <section class="box-phone text-center">
             <h1>Réserver maintenant</h1>
             <p>
                 <?php echo get_option('inforesto_phone'); ?>

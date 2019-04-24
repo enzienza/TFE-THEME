@@ -6477,21 +6477,39 @@ ul {
   background-attachment: fixed;
 }
 
-.box-jumbotron {
-  position: relative;
-  bottom: 17rem;
+.jumbotron {
   text-align: center;
+  color: #fefefe;
+  position: relative;
+  top: 13rem;
+  font-weight: 300;
 }
 
-.box-jumbotron h1 {
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+.jumbotron h1 {
+  font-size: 4rem;
+  line-height: 2;
+  letter-spacing: 5px;
 }
 
-.box-jumbotron p {
-  font-size: 1.25rem;
-  font-weight: 300;
+.jumbotron p {
+  font-size: 1.2rem;
+}
+
+.box-phone {
+  background-color: #333;
+  color: #fefefe;
+  padding: 3rem;
+  font-size: 1.8rem;
+}
+
+.box-phone h1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.box-phone p {
+  letter-spacing: 3px;
+  line-height: 2;
 }
 
 /* -------------------------------------------- */

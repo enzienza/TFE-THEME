@@ -13,17 +13,18 @@
 }
 
 
-.box-jumbotron{
-    position: relative;
-    bottom: 17rem;
+.jumbotron{
     text-align: center;
+    color: $colorLight;
+    position: relative;
+    top: 13rem;
+    font-weight: 300;
     h1{
-        font-size: 3.5rem;
-        font-weight: 300;
-        line-height: 1.2;
+        font-size: 4rem;
+        line-height: 2;
+        letter-spacing: 5px;
     }
     p{
-        font-size: 1.25rem;
-        font-weight: 300;
+        font-size: 1.2rem;
     }
 }
