@@ -149,4 +149,6 @@ require get_template_directory(). '/functions/cpt/emporter.php';
 require get_template_directory(). '/functions/cpt/evenement.php';
 
 
+require get_template_directory(). '/functions/cpt/cpt-album.php';
+
 // require get_template_directory(). '/functions/cpt/album.php';
